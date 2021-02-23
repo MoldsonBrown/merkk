@@ -2,7 +2,7 @@ body {
   background-color: #2d2828;
 }
 
-img {
+.container {
   width: 80%;
   position: absolute;
   top: 50%;
