@@ -49,6 +49,12 @@ Envato Profile: http://themeforest.net/user/myboodesign
 /*  ----------------------------------------------------
 2. GENERAL STYLES
 -------------------------------------------------------- */
+.imgrespo{
+  width:100%
+}
+
+
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2141,6 +2147,7 @@ table th.bg-pasific {
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
             transition: background .5s ease-in-out,padding .5s ease-in-out;
+    width: 100%;
 }
 .navbar-container {
     position: absolute;
