@@ -2,11 +2,10 @@
 <html lang="en">
     <head>
         <title>Estudio Llaver | Abogados</title>
+        <meta lang="es">
         <meta name="descriptIon" content="">
         <meta name="keywords" content="">
-        <meta charset="utf-8">
-        <meta name="author" content="Harry Boo">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <!-- Favicons -->
@@ -25,7 +24,7 @@
         <link rel="stylesheet" href="assets/css/main/main.css">
         <link rel="stylesheet" href="assets/css/main/setting.css">
         <link rel="stylesheet" href="assets/css/main/hover.css">
-
+        <link rel="stylesheet" href="assets/css/main/form.css">
         <!-- Load Magnific Popup CSS
         =====================================-->
         <link rel="stylesheet" href="assets/css/magnific/magic.min.css">
@@ -34,9 +33,9 @@
 
         <!-- Load OWL Carousel CSS
         =====================================-->
-        <link rel="stylesheet" href="assets/css/owl-carousel/owl.carousel.css">
+        <!--<link rel="stylesheet" href="assets/css/owl-carousel/owl.carousel.css">
         <link rel="stylesheet" href="assets/css/owl-carousel/owl.theme.css">
-        <link rel="stylesheet" href="assets/css/owl-carousel/owl.transitions.css">
+        <link rel="stylesheet" href="assets/css/owl-carousel/owl.transitions.css">-->
 
         <!-- Load Color CSS - Please uncomment to apply the color.
         =====================================
@@ -267,45 +266,34 @@
                             <br>
                             Tel: (+5411) 4372.7312 / 5032.2404
                             <br>
-                            <a href="https://api.whatsapp.com/send?phone=1154203180">Enviar WhatsApp</a>
+                            <a href="https://api.whatsapp.com/send?phone=541154203180">Enviar WhatsApp</a>
                             <br>
                             Para consultas generales, por favor completa el siguiente formulario:
                         </small>
                     </h1>
                     </div>
                 </div>
-
-                <div class="row">
-                    <form name="contactform" id="contactForm" method="post" action="assets/php/sendMail.php">
-
-                        <!-- sender name start -->
-                        <div class="col-md-3 col-sm-3 col-xs-6">
-                            <div class="form-group">
-                                <input type="text" name="senderName" id="senderName" class="input-md input-rounded form-control" placeholder="Nombre Completo" maxlength="100" required>
-                            </div>
-                        </div>
-                        <!-- sender name end -->
-
-                        <!-- sender email start -->
-                        <div class="col-md-3 col-sm-3 col-xs-6">
-                            <div class="form-group">
-                                <input type="email" name="senderEmail" id="senderEmail" class="input-md input-rounded form-control" placeholder="Email" maxlength="100" required>
-                            </div>
-                        </div>
-                        <!-- sender email end -->
-
-                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                            <textarea class="form-control" name="message" id="message" rows="7" required></textarea>
-                            <button type="submit" name="sendMessage" id="sendMessage" class="button button-md button-pasific hover-ripple-out mt20 center-block">Enviar Consulta</button>
-                        </div>
-
-                        <div id="sendingMessage" class="statusMessage sending-message"><p>Enviando su consulta...por favor aguarde.</p></div>
-                        <div id="successMessage" class="statusMessage success-message"><p>Enviamos su consulta! Nos contactaremos a la brevedad.</p></div>
-                        <div id="failureMessage" class="statusMessage failure-message"><p>Hubo un problema al enviar el mensaje. Por favor intente nuevamente</p></div>
-                        <div id="incompleteMessage" class="statusMessage"><p>Por favor complete todos los campos.</p></div>
-
-                    </form>
-                </div><!-- row end -->
+                <section>
+                <div class="formulario">
+                  <form class="contact-form" action="contactform.php" method="POST"/>
+                    <div class="form-group">
+                      <input type="text" id="name" name="name" placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" id="mail" name="mail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <input type="subject" id="subject" name="subject" placeholder="Motivo">
+                    </div>
+                  <div class="form-group">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                  </div>
+                  <button type="submit" name="submit" href="#form-group">Enviar Consulta</button>
+                  </form>
+                </div>
+                <div id="status" class="success">Consulta Enviada!</div>
+              </section>
+                </div>
             </div><!-- container end -->
         </div><!-- section contact us end -->
 
