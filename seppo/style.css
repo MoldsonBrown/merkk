@@ -175,7 +175,7 @@ body pre {
 #toggle div {
     height: 3px;
     margin-bottom: 6px;
-    background-color: #fff;
+    background-color: #000;
     width: 22px;
 }
 
@@ -2244,7 +2244,7 @@ footer .footer-social-divider:before {
     .menu-holder {
         position: fixed;
         text-align: center;
-        background-color: #000000;
+        background-color: #fff;
         right: -100%;
         top: 77px;
         transition: right .3s ease;
