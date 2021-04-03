@@ -49,6 +49,8 @@ Envato Profile: http://themeforest.net/user/myboodesign
 /*  ----------------------------------------------------
 2. GENERAL STYLES
 -------------------------------------------------------- */
+
+
 .google-maps {
     position: relative;
     padding-bottom: 75%; // This is the aspect ratio
@@ -2607,6 +2609,8 @@ table th.bg-pasific {
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
+    width: 100%;
+    height: auto;
 }
 
 .intro .intro-body .brand-heading {
@@ -4538,6 +4542,8 @@ ul.pagination.pagination-pasific li.active a {
 .parallax-window {
     min-height: 400px;
     background: transparent;
+    width: 100%;
+    height: auto;
 }
 .parallax-window-2 {
     min-height: 350px;
