@@ -106,7 +106,7 @@ BACKGROUND SETTING
 
 .bg-gray 	{ background-color: #f5f7f9 !important; }
 .bg-gray2 	{ background-color: #e0e0e0 !important; }
-.bg-light   { background-color: #ffffff !important; }
+.bg-light   { background-color: #FDF7FA !important; }
 .bg-white   { background-color: #ffffff !important; }
 .bg-black   { background-color: #111111 !important; }
 
@@ -166,11 +166,11 @@ BACKGROUND SETTING
     background: linear-gradient(-45deg, #9733EE, #DA22FF);
 }
 .bg-grad-stellar {
-    background: #6a6d6e;
-    background: -webkit-linear-gradient(-45deg, #6a6d6e, #D9D9D9);
-    background: -o-linear-gradient(-45deg, #6a6d6e, #D9D9D9);
-    background: -moz-linear-gradient(-45deg, #6a6d6e, #D9D9D9);
-    background: linear-gradient(-45deg, #6a6d6e, #D9D9D9);
+    background: #FDFFFC;
+    background: -webkit-linear-gradient(-45deg, #FDFFFC, #FDFFFC);
+    background: -o-linear-gradient(-45deg, #FDFFFC, #FDFFFC);
+    background: -moz-linear-gradient(-45deg, #FDFFFC, #FDFFFC);
+    background: linear-gradient(-45deg, #FDFFFC, #FDFFFC);
 }
 .bg-grad-day-tripper {
     background: #f857a6;
