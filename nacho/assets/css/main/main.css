@@ -53,7 +53,7 @@ Envato Profile: http://themeforest.net/user/myboodesign
 
 .google-maps {
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
+    padding-bottom: 40%; // This is the aspect ratio
     height: 0;
     overflow: hidden;
 }
@@ -247,6 +247,7 @@ small {
 .navbar-icons {
   padding-top: 7px;
   padding-left: 10px;
+  filter: invert(25%) sepia(25%) saturate(2569%) hue-rotate(102deg) brightness(93%) contrast(102%);
 }
 
 .mouse-icon .wheel {
