@@ -398,6 +398,7 @@ background-color: lemonchiffon;
     line-height: 120%;
     font-weight: 700;
     padding-bottom: 35px;
+    text-align: left;
 }
 
 .title-description-up {
@@ -880,6 +881,7 @@ p.opens {
     background-position: right center;
     background-repeat: no-repeat;
     background-size: auto;
+    filter: grayscale(16%);
 }
 
 
