@@ -37,6 +37,10 @@
 @import url("css/owl.carousel.min.css");
 @import url("css/owl.theme.default.min.css");
 @import url("css/common.css");
+@font-face {
+  font-family: Market;
+  src: url("C:/Users/Moldson/Desktop/merkk/seppo/fonts/Market Fresh ALL CAPS.ttf");
+}
 
 
 
@@ -45,11 +49,11 @@
 ====================================== */
 
 body {
-   font-family: 'Arvo', serif;
-    font-size: 18px;
-    line-height: 35px;
+    font-family: 'Arvo', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
     font-weight: 400;
-    color: #b3b3b3;
+    color: black;
     background-color: #ffffff;
     overflow-x: hidden;
 }
@@ -83,12 +87,12 @@ body pre {
     width: 100%;
     height: 100%;
     z-index: 99999;
-    background-color: #000;
+    background-color: #fff;
 }
 
 .doc-loader img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -202,6 +206,7 @@ body pre {
 
 #header-main-menu {
     display: inline-block;
+    font-family: 'Open sans', sans-serif;
 }
 
 .sm-clean .has-submenu {
@@ -230,7 +235,6 @@ body pre {
     transition: color .3s ease,
         background-color .3s ease;
     padding: 15px;
-    letter-spacing: 0.5px;
     color: #000;
 }
 
@@ -256,7 +260,8 @@ body .sm-clean li.active a,
 body .sm-clean li.current-page-ancestor > a,
 body .sm-clean li.current_page_ancestor > a,
 body .sm-clean li.current_page_item > a {
-    color: #8cccce;
+background-color: lemonchiffon;
+
 }
 
 .sm-clean li {
@@ -341,7 +346,7 @@ body .sm-clean li.current_page_item > a {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #8cccce;
+    background-color: #f68c64;
     width: 285px;
     display: inline-block;
     z-index: 98;
@@ -354,7 +359,7 @@ body .sm-clean li.current_page_item > a {
     height: 0;
     border-style: solid;
     border-width: 130px 60px 0 0;
-    border-color: #8cccce transparent transparent transparent;
+    border-color: #f68c64 transparent transparent transparent;
     position: absolute;
     top: 0;
     right: 0;
@@ -367,7 +372,7 @@ body .sm-clean li.current_page_item > a {
     font-weight: 400;
     word-break: break-word;
     text-align: center;
-    color: #fff;
+    color: white;
     letter-spacing: 2px;
     margin-top: 32px;
 }
@@ -794,6 +799,7 @@ a.button-dot:hover:before {
     background-repeat: no-repeat;
     min-height: calc(100vh - 77px);
     display: flex;
+    filter: grayscale(16%);
 }
 
 #home .section-wrapper {
@@ -802,11 +808,13 @@ a.button-dot:hover:before {
 }
 
 h1.big-text {
-    color: #fff;
-    font-size: 30px;
-    line-height: 120%;
-    margin-bottom: 40px;
-    margin-top:80px;
+  color: #FFD;
+  font-size: 41px;
+  line-height: 117%;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  opacity: 87%;
+  letter-spacing: 1.5px;
 }
 
 p.opens {
@@ -816,9 +824,6 @@ p.opens {
   line-height: 1.4em;
 }
 
-i {
-  font-weight: 300;
-}
 
 /* ===================================
     4. Services Section CSS
@@ -2440,7 +2445,7 @@ footer .footer-social-divider:before {
 
     .medium-text {
         font-size: 40px;
-        line-height: 105%;
+        line-height: 109%;
         padding-top: 10px;
     }
 

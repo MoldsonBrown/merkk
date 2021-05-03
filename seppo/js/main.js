@@ -28,7 +28,7 @@
         isotopeSetUp();
         setUpParallax();
         hashFix();
-        $('.doc-loader').fadeOut(600);
+        $('.doc-loader').fadeOut(4000);
     });
 
     $(window).on('resize', function () {
