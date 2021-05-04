@@ -818,6 +818,17 @@ h1.big-text {
   letter-spacing: 1.5px;
 }
 
+h1.entry-title {
+  text-align: center;
+  padding: 126px 0 20px 0;
+  font-size: 41px;
+}
+
+h1.titulo {
+  text-align: left;
+  font-size: 24px;
+}
+
 p.opens {
   font-family: 'Open Sans', sans-serif;
   font-size: 11px;
@@ -1766,7 +1777,7 @@ body.blog {
 
 .single-post-featured-image {
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
     width: 1300px;
     margin-left: auto;
     margin-right: auto;
