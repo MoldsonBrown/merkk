@@ -549,14 +549,16 @@ background-color: lemonchiffon;
     font-size: 16px;
     color: #000;
     letter-spacing: 2px;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     line-height: 120%;
+    text-align: center;
 }
 
 .info-code-content,
 .info-code-content a {
     color: #b3b3b3;
-    margin-bottom: 30px;
+    margin-bottom: 6px;
+    line-height: 1.4em;
 }
 
 .tp-bullet-title {
