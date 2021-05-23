@@ -437,9 +437,9 @@ background-color: lemonchiffon;
     position: absolute;
     top: 0;
     left: 0;
-    background: #303952;
+    background: #f1a208;
     z-index: 1;
-    opacity: 0.25;
+    opacity: 0.23;
 }
 
 .vidsection {
