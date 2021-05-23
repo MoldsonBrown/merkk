@@ -343,7 +343,7 @@ background-color: lemonchiffon;
   justify-content: center;
   align-content: center;
   gap: 4px;
-  z-index: 1;
+  z-index: 2;
   color: white;
   grid-auto-flow: column;
   padding: 5px;
@@ -355,7 +355,7 @@ background-color: lemonchiffon;
 .columna {
   flex: 50%;
   padding: 10px;
-  z-index: 1;
+  z-index: 2;
   color: white;
 }
 
@@ -372,7 +372,7 @@ background-color: lemonchiffon;
 	left: 50%;
 	margin-left: -30px;
 	bottom: 20px;
-  z-index: 1;
+  z-index: 2;
   margin-top: -10em;
 }
 
@@ -418,7 +418,7 @@ background-color: lemonchiffon;
 
 
 .textou {
-  z-index: 1;
+  z-index: 2;
   font-size: 2rem;
   line-height: normal;
   text-align: center;
@@ -429,18 +429,28 @@ background-color: lemonchiffon;
 
 }
 
+.overlay {
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #303952;
+    z-index: 1;
+    opacity: 0.3;
+}
 
 .vidsection {
   margin: 0 auto;
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   overflow: hidden;
   z-index: 1;
 }
 
 .titlemaster {
   font-size: 5rem;
-  z-index: 1;
+  z-index: 2;
   color: white;
   line-height: normal;
   text-align: center;
@@ -961,7 +971,7 @@ a.button-dot:hover:before {
 
 h1.big-text {
   color: #FFD;
-  font-size: 52px;
+  font-size: 60px;
   line-height: 117%;
   margin-bottom: 40px;
   margin-top: 80px;
@@ -1190,11 +1200,15 @@ p.opens {
     width: 100% !important;
     height: auto;
     display: block;
-   -webkit-filter: grayscale(80%); /* Chrome 19+ & Safari 6+ */
+    filter: grayscale(70%); /* Chrome 19+ & Safari 6+ */
+    transition: filter 600ms ease;
 }
 
 .grid-item img:hover {
-   -webkit-filter: grayscale(0%);
+    width: 100% !important;
+    height: auto;
+    display: block;
+    filter: grayscale(0); /* Chrome 19+ & Safari 6+ */
 }
 
 .grid-item .entry-holder {
@@ -1204,7 +1218,6 @@ p.opens {
 }
 
 .grid-item a.item-link:after {
-    content: "";
     display: block;
     position: absolute;
     width: 100%;
