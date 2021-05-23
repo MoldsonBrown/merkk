@@ -337,30 +337,171 @@ background-color: lemonchiffon;
 /* ===================================
     2.2 General Section CSS
 ====================================== */
+.fila {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+  z-index: 1;
+  color: white;
+  grid-auto-flow: column;
+  padding: 5px 0 115px;
+}
 
+/* Create two equal columns that sits next to each other */
+.columna {
+  flex: 50%;
+  padding: 10px;
+  z-index: 1;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .columna {
+    width: 100%;
+  }
+}
+
+
+.arrow-container{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.arrow-1{
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.arrow-2{
+  width: 60px;
+  height: 60px;
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  display: table;
+  z-index: 1;
+}
+
+.arrow-2:before{
+  width: 52px;
+  height: 52px;
+  content: "";
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+}
+
+.arrow-2 i.fa{
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #006064;
+}
+
+/* Custom Animate.css */
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .4, .4);
+            transform: scale3d(.4, .4, .4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .4, .4);
+            transform: scale3d(.4, .4, .4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+}
+
+
+.textou {
+  z-index: 1;
+  font-size: 2rem;
+  line-height: normal;
+  text-align: center;
+  width: auto;
+  height: auto;
+  position: relative;
+  color: white;
+
+}
 
 
 .vidsection {
+  margin: 0 auto;
   width: 100%;
-  height: 100vh;
-  display: flex;
+  height: 80vh;
   overflow: hidden;
   z-index: 1;
 }
 
-.vidsection h1 {
-  margin-left: auto;
-  margin-right: auto;
+.titlemaster {
   font-size: 5rem;
   z-index: 1;
   color: white;
-  padding-top: 4em;
+  line-height: normal;
+  text-align: center;
+  width: auto;
+  height: auto;
+  margin-top: 1.5em;
+  padding: 10px;
+  position: relative;
 }
+
 .video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 
 .section {
