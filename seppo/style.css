@@ -1157,10 +1157,9 @@ p.opens {
     8. Portfolio Section CSS
 ====================================== */
 
-
-
-
-
+.site-content {
+  filter: grayscale(16%);
+}
 
 .grid {
     width: 100%;
@@ -1654,6 +1653,8 @@ p.milestone-num {
 /* ===================================
     13. Blog Page CSS
 ====================================== */
+
+
 
 body.blog {
     background-color: #fff;
