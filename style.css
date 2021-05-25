@@ -1,37 +1,23 @@
-body {
-  background-color: #2d2828;
-}
-
 .container {
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-
-}
-
-@keyframes floating {
-0% { transform: translate(0,  0px); }
-50%  { transform: translate(0, 15px); }
-100%   { transform: translate(0, -0px); }
-}
-
-p {
-  font-size: 120px;
+  font-size: 60px;
   color: rgba(225, 225, 225, 0.1);
   font-family: 'Poppins', sans-serif;
   margin: 0;
   text-align: center;
-  line-height: 1em;
   background-image: url(img/abstrakt.jpeg);
   background-repeat: repeat-x;
   -webkit-background-clip:text;
-  animation: animate 15s linear infinite;
+  animation: animate 60s linear infinite;
+  padding-top: 3em;
+}
+.container h1 {
+  margin: 0;
+  line-height: 1.3em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 @keyframes animate {
@@ -39,6 +25,41 @@ p {
       background-position: left 0px top 10px;
     }
     40% {
-      background-position: left 800px top 10px;
+      background-position: left 600px top 10px;
     }
+}
+
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url(img/noise-transparent.png) repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
 }
