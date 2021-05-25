@@ -1,8 +1,26 @@
-.container {
+html {
+  scroll-behavior: smooth;
+}
+
+.sections {
+  height: 100vh;
+  width: 100vw;
+}
+
+.sections p {
+  text-align: left;
+  color: #fffd77;
+  font-size: 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu {
   font-size: 120px;
   color: rgba(225, 225, 225, 0.1);
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  height:100vh;
+  width: 100vw;
   text-align: center;
   background-image: url(img/abstrakt.jpeg);
   background-repeat: repeat-x;
@@ -11,7 +29,7 @@
   padding-top: 1.5em;
   position:relative;
 }
-.container p {
+.menu p {
   margin: 0;
   line-height: 1.3em;
 }
