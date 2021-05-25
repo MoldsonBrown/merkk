@@ -20,3 +20,13 @@ body {
 50%  { transform: translate(0, 15px); }
 100%   { transform: translate(0, -0px); }
 }
+
+p {
+  font-size: 120px;
+  color: rgba(225, 225, 225, 0.1);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  text-align: center;
+  line-height: 1em;
+  background-image: url(img/abstrakt.jpeg);
+}
