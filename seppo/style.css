@@ -52,7 +52,7 @@
 
 
 body {
-    font-family: 'Arvo', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     line-height: 30px;
     font-weight: 400;
@@ -342,17 +342,15 @@ background-color: lemonchiffon;
 ====================================== */
 
 .fila {
-  display: grid;
-  justify-content: center;
-  align-content: center;
   gap: 4px;
   z-index: 2;
-  color: white;
-  grid-auto-flow: column;
+  color: #fff;
   padding: 20px;
-  background-color:rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 17px;
+  margin-top: 1.6em;
+  line-height: 1.5em;
+  background-color: #0006;
 }
 
 /* Create two equal columns that sits next to each other */
@@ -435,7 +433,7 @@ background-color: lemonchiffon;
 }
 
 .overlay {
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -448,21 +446,36 @@ background-color: lemonchiffon;
 .vidsection {
   margin: 0 auto;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
   z-index: 1;
 }
 
 .titlemaster {
-  font-size: 5rem;
+  font-size: 1.7rem;
   z-index: 2;
   color: white;
   line-height: normal;
   text-align: center;
   width: auto;
   height: auto;
-  margin-top: 1.5em;
-  padding: 10px;
+  padding: 1px;
+  position: relative;
+  margin-bottom: -0.8rem;
+  margin-top: 1em;
+  letter-spacing: 1px;
+}
+
+.titlemaster2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 6.2rem;
+  z-index: 2;
+  color: white;
+  line-height: normal;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 1px;
   position: relative;
 }
 
@@ -595,6 +608,55 @@ body .social a:hover {
 /* ===================================
     2.3 Columns CSS
 ====================================== */
+
+.buttonClass {
+    color: #fff;
+    background-color: #f68c64;
+    text-align: center;
+    padding: 10px 40px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .2s linear;
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    border: 2px solid #f68c64;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+
+.buttonClass1 {
+    color: #fff;
+    background-color: #8dccce;
+    text-align: center;
+    padding: 10px 40px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .2s linear;
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    border: 2px solid #8dccce;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+
+.buttonClass1:hover{
+  background-color: #fff;
+}
+
+.buttonClass:hover{
+  background-color: #fff;
+  color: #f68c64;
+}
 
 .one_half,
 .one_third,
@@ -977,13 +1039,30 @@ a.button-dot:hover:before {
 }
 
 h1.big-text {
-  color: #FFD;
+  color: #fff;
   font-size: 60px;
-  line-height: 117%;
   margin-bottom: 40px;
   margin-top: 80px;
   opacity: 87%;
   letter-spacing: 1.5px;
+  text-align: center;
+}
+
+a.titulo1 {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 62px;
+  opacity: 87%;
+  text-align: center;
+}
+
+a.titulo2 {
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+  font-size: 90px;
+  line-height: 1.2em;
+  opacity: 87%;
+  text-align: center;
 }
 
 h1.entry-title {
@@ -1483,7 +1562,7 @@ p.opens {
 
 .member-info {
     width: 380px;
-    background-color: #fff;
+    background-color: #ffbb02;
     padding: 65px 110px;
     display: inline-block;
     vertical-align: middle;
@@ -1491,6 +1570,11 @@ p.opens {
     text-align: left;
     position: relative;
     z-index: 31;
+}
+
+p.howwework {
+  font-size: 16px;
+  text-align: left;
 }
 
 .member-right .member-info {
@@ -1515,8 +1599,6 @@ p.opens {
 }
 
 .member-social-holder {
-    background: #8cccce;
-    padding: 25px 50px;
     position: absolute;
     bottom: -35px;
     left: -45px;
