@@ -552,9 +552,15 @@ background-color: lemonchiffon;
     color: #000;
 }
 
+.info-code {
+  background-color: grey;
+  padding: 20px;
+  border-radius: 8px;
+}
+
 .info-code-title {
     font-size: 16px;
-    color: #000;
+    color: #fff;
     letter-spacing: 2px;
     margin-bottom: 1em;
     line-height: 120%;
@@ -563,7 +569,7 @@ background-color: lemonchiffon;
 
 .info-code-content,
 .info-code-content a {
-    color: #b3b3b3;
+    color: #fff;
     margin-bottom: 6px;
     line-height: 1.4em;
 }
