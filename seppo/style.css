@@ -1053,7 +1053,7 @@ a.button-dot:hover:before {
     left:-100;
   }
   40% {
-    background-image: url(images/fitzroy2.jpg);
+    background-image: url(images/cholas.jpg);
     left:-200;
   }
   60% {
@@ -1062,15 +1062,11 @@ a.button-dot:hover:before {
   }
   80% {
     background-image: url(images/pastizal.jpg);
-    left:-300;
-  }
-  90% {
-    background-image: url(images/calafate.jpg);
     left:-400;
   }
   100% {
-    background-image: url(images/cholas.jpg);
-      left:0;
+    background-image: url(images/calafate.jpg);
+    left:0;
   }
 }
 #home .hidden {
