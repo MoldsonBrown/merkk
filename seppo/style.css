@@ -1064,7 +1064,7 @@ a.button-dot:hover:before {
     background-image: url(images/pastizal.jpg);
     left:-300;
   }
-  100% {
+  90% {
     background-image: url(images/calafate.jpg);
     left:-400;
   }
