@@ -48,7 +48,9 @@
     2. Global CSS
 ====================================== */
 
-
+.textodale {
+  padding-top: 20px;
+}
 
 
 body {
@@ -416,8 +418,6 @@ background-color: lemonchiffon;
 	animation-delay:0s;
 	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
-
-
 
 .textou {
   z-index: 2;
