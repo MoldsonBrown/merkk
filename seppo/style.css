@@ -1078,6 +1078,10 @@ a.button-dot:hover:before {
     padding: 0;
 }
 
+.links {
+  text-decoration: underline;
+}
+
 h1.big-text {
   color: #fff;
   font-size: 60px;
