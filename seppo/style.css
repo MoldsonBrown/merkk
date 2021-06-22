@@ -2893,7 +2893,11 @@ footer .footer-social-divider:before {
     }
 
     .section-wrapper {
+<<<<<<< HEAD
         padding: 50 0 30px 0;
+=======
+        padding: 0 0 30px 0;
+>>>>>>> 829b8c1b32bfe12687e9a7b9bc508921db9271ce
     }
 
     .page-title-holder:after {
