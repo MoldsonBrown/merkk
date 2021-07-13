@@ -2285,8 +2285,42 @@ body.blog {
 /* ===================================
     16. Footer CSS
 ====================================== */
+.whomadeit {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
 
-footer a {
+.foota {
+  background-color: #fff;
+  line-height: 36px;
+  color: #111;
+  border: 5px;
+}
+
+.foota a {
+  color: #111;
+}
+
+.foota-content a {
+  display: flex;
+  justify-content: center;
+}
+
+.foota-mail {
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+    padding-top: 0.4em;
+}
+
+.foota-logo {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*footer a {
     color: #fff;
 }
 
@@ -2299,20 +2333,15 @@ footer ul {
 .footer {
     font-size: 16px;
     line-height: 36px;
-    padding-top: 75px;
-    padding-bottom: 60px;
     clear: both;
     color: #fff;
-    text-align: center;
+    padding-bottom: 2em;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center top;
     background-color: #111;
 }
 
-.footer-content {
-    width: 900px;
-}
 
 .footer-logo img {
     width: 88px;
@@ -2323,7 +2352,6 @@ footer ul {
 .footer-logo-divider {
     position: relative;
     height: 60px;
-    margin-bottom: 30px;
 }
 
 .footer-logo-divider:before {
@@ -2341,6 +2369,7 @@ footer ul {
     margin-bottom: 35px;
     line-height: 100%;
     font-weight: 700;
+    align-items: center;
 }
 
 .footer-social-divider {
@@ -2369,6 +2398,11 @@ footer .footer-social-divider:before {
     top: 0;
 }
 
+.whomadeit {
+  align-items: center;
+}
+
+
 .social-holder {
     margin-bottom: 35px;
 }
@@ -2380,7 +2414,7 @@ footer .footer-social-divider:before {
 
 .social-holder a:last-of-type {
     margin: 0;
-}
+}*/
 
 
 
@@ -2458,6 +2492,7 @@ footer .footer-social-divider:before {
     .blog-holder,
     .footer-content {
         width: 100%;
+        align-content: center;
     }
 
     .single .post-info-wrapper {
@@ -2911,6 +2946,7 @@ footer .footer-social-divider:before {
 
     .footer-mail {
         font-size: 30px;
+        text-align: center;
     }
 
     blockquote {
