@@ -1041,6 +1041,27 @@ a.button-dot:hover:before {
 /* ===================================
     3. Home Section CSS
 ====================================== */
+#southern {
+    background-image: url(images/desierto.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
+    filter: grayscale(16%);
+    animation: slideBg 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+#southern .hidden {
+  display: none;
+}
+#southern .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
 
 #home {
     background-image: url(images/desierto.jpg);
@@ -1115,6 +1136,23 @@ a.titulo2 {
   line-height: 1.2em;
   opacity: 87%;
   text-align: center;
+}
+
+a.titulo3 {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 33px;
+  opacity: 87%;
+  text-align: center;
+}
+
+a.titulo4 {
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+  font-size: 60px;
+  line-height: 1.2em;
+  opacity: 87%;
+  text-align:
 }
 
 h1.entry-title {
