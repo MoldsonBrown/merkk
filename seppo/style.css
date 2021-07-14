@@ -1041,6 +1041,16 @@ a.button-dot:hover:before {
 /* ===================================
     3. Home Section CSS
 ====================================== */
+.entry-taitl {
+font-size: 27px;
+/* line-height: 149%; */
+/* font-weight: 400; */
+word-break: break-word;
+/* text-align: center; */
+color: black;
+letter-spacing: 2px;
+}
+
 #southern {
     background-image: url(images/desierto.jpg);
     background-position: center center;
