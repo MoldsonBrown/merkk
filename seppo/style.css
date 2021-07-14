@@ -1050,9 +1050,28 @@ a.button-dot:hover:before {
     min-height: calc(60vh - 77px);
     display: flex;
     filter: grayscale(16%);
-    animation: slideBg 20s linear infinite;
+    animation: slideBg2 20s linear infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
+}
+
+@keyframes slideBg2 {
+  0% {
+    background-image: url(images/SP_03.jpg);
+    left:0;
+  }
+  40% {
+    background-image: url(images/SP_02.jpg);
+    left:0;
+  }
+  80% {
+    background-image: url(images/SP_01.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/SP_04.jpg);
+    left:0;
+  }
 }
 
 #southern .hidden {
