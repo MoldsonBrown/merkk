@@ -445,7 +445,7 @@ background-color: lemonchiffon;
 }
 
 .titlemaster {
-  font-size: 53px;
+  font-size: 40px;
   z-index: 2;
   color: white;
   line-height: normal;
@@ -462,11 +462,11 @@ background-color: lemonchiffon;
   font-size: 6.2rem;
   z-index: 2;
   color: white;
-  line-height: normal;
+  line-height: 80%;
   text-align: center;
   width: auto;
   height: auto;
-  padding: 1px;
+  padding-top: 25px;
   position: relative;
 }
 
