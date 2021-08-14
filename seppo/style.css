@@ -649,7 +649,25 @@ body .social a:hover {
     letter-spacing: 2px;
     box-sizing: border-box;
 }
-
+.buttonClass2 {
+    color: #fff;
+    background-color: #669acc;
+    text-align: center;
+    padding: 10px 40px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .2s linear;
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    border: 2px solid #f68c64;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
 .buttonClass3 {
     color: #fff;
     background-color: #8dccce;
