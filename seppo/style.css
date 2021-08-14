@@ -710,6 +710,11 @@ body .social a:hover {
   background-color: #fff;
 }
 
+.buttonClass2:hover{
+  background-color: #fff;
+  color: #669acc;
+}
+
 .buttonClass3:hover{
   background-color: #fff;
 }
