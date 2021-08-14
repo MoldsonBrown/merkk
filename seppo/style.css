@@ -1184,7 +1184,7 @@ a.titulo1 {
 a.titulo2 {
   font-family: 'Caveat', cursive;
   color: #fff;
-  font-size: 90px;
+  font-size: 99px;
   line-height: 1.2em;
   opacity: 87%;
   text-align: center;
@@ -2427,6 +2427,9 @@ footer ul {
 
 .footer-content {
     width: 900px;
+}
+.anitawwa {
+  align-content: right;
 }
 
 .footer-logo img {
