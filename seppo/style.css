@@ -1691,6 +1691,19 @@ p.opens {
     z-index: 31;
 }
 
+.member-info2 {
+    width: 380px;
+    background-color: #9cccce;
+    padding: 65px 110px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -130px;
+    text-align: left;
+    position: relative;
+    z-index: 31;
+}
+
+
 p.howwework {
   font-size: 16px;
   text-align: left;
@@ -1701,6 +1714,10 @@ p.howwework {
     margin-right: -130px;
 }
 
+.member-right .member-info2 {
+    margin-left: auto;
+    margin-right: -130px;
+}
 .member-postition {
     margin: 0;
     font-size: 16px;
