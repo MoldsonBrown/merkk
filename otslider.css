@@ -47,7 +47,8 @@
 	position:absolute;
 }
 .ot-slider .ot-items .ot-item img{
-	height:80vh;
+	width:100%;
+	height:auto;
 }
 .ot-slider .ot-nav{
 	position:absolute;
