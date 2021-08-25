@@ -36,7 +36,7 @@ function OTSlider(){
 		canTransform : false,
 		itemStartPosition : [],
 		itemEndPosition : [],
-		
+
 		configs : {
 			element : 'ot-slider',
 			direction: 'ltr',
@@ -59,9 +59,9 @@ function OTSlider(){
 			responsive : true,
 			roundButtons : false,
 			numericNav : true,
-			centered : false,
+			centered : true,
 		},
-		
+
 		init : function(configs){
 
 			if(sliderInstID > 0)
@@ -71,61 +71,61 @@ function OTSlider(){
 
 			var configs = (configs && 'object' === typeof configs) ?
 			configs : {};
-			
+
 			if(configs.transition && /^(slide|fade)$/i.test(configs.transition))
 				this.configs.transition = configs.transition;
-			
+
 			if(configs.element && ('string' === typeof configs.element ||
 			configs.element.nodeType == 1)){
 				this.configs.element = ('string' === typeof configs.element) ?
 				configs.element.toLowerCase() : configs.element;
 			}
-			
+
 			if(configs.prevButton && 'string' === typeof configs.prevButton)
 				this.configs.prevButton = configs.prevButton;
-			
+
 			if(configs.nextButton && 'string' === typeof configs.nextButton)
 				this.configs.nextButton = configs.nextButton;
-			
+
 			if(configs.duration && 'number' === typeof configs.duration &&
 			configs.duration > 9)
 				this.configs.duration = configs.duration;
-			
+
 			if(configs.transitionDuration &&
 			'number' === typeof configs.transitionDuration)
 				this.configs.transitionDuration = configs.transitionDuration;
-			
+
 			if('boolean' === typeof configs.showNav)
 				this.configs.showNav = configs.showNav;
-			
+
 			if('boolean' === typeof configs.showPrevNext)
 				this.configs.showPrevNext = configs.showPrevNext;
-			
+
 			if('boolean' === typeof configs.responsive)
 				this.configs.responsive = configs.responsive;
-			
+
 			if(configs.width && 'number' === typeof configs.width)
 				this.configs.width = configs.width;
-			
+
 			if(configs.height && 'number' === typeof configs.height)
 				this.configs.height = configs.height;
-			
+
 			if('boolean' === typeof configs.pauseOnHover)
 				this.configs.pauseOnHover = configs.pauseOnHover;
-			
+
 			if('boolean' === typeof configs.autoPlay)
 				this.configs.autoPlay = configs.autoPlay;
-			
+
 			if(configs.direction && 'string' === typeof configs.direction &&
 			/^(ltr|rtl)$/gi.test(configs.direction))
 				this.configs.direction = configs.direction.toLowerCase();
-			
+
 			if('boolean' === typeof configs.swipe)
 				this.configs.swipe = configs.swipe;
-			
+
 			if('boolean' === typeof configs.roundButtons)
 				this.configs.roundButtons = configs.roundButtons;
-			
+
 			if('boolean' === typeof configs.numericNav)
 				this.configs.numericNav = configs.numericNav;
 
@@ -153,26 +153,26 @@ function OTSlider(){
 
 			this.common();
 		},
-		
+
 		common : function(){
 			var ots = OTSlider;
-			
+
 			var loaded = function(){
 				//Fisrt we setup the slider
 				ots.setupSlider();
-				
+
 				//Setup slider's items
 				ots.setupItems();
-				
+
 				//Setup slider's dimensions and it's items
 				ots.setupDimensions();
-				
+
 				//Setup the navs
 				ots.setupNavs();
-				
+
 				//Configure some elements of slider
 				ots.setupSlideDOM();
-				
+
 				//Slider initialization
 				ots.slideInit();
 			}
@@ -191,10 +191,10 @@ function OTSlider(){
 				});
 			}
 		},
-		
+
 		setupSlider : function(){
 			var b = this.configs.element, e;
-			
+
 			//Get the slider container
 			e = (b.nodeType == 1) ? b : document.getElementById(b) ||
 			this.gecn(document.body, b)[0];
@@ -203,71 +203,71 @@ function OTSlider(){
 				throw new Error("Element not found. Please specify an valid" +
 				" HTML element or specify its class name or ID.");
 			}
-			
+
 			//Create slide's reference in our object
 			this.slider = e;
-			
+
 			//Add the required class attribute in order to style the slide
 			this.acn(e, this.slideClass);
-			
+
 			e.setAttribute("data-running", "true");
-			
+
 			//Only set the width or height if it was specified
 			if(this.configs.width)
 				e.style.width = this.configs.width + "px";
-			
+
 			if(this.configs.height)
 				e.style.height = this.configs.height + "px";
 
 			this.configs.itemsScrollBy = Math.min(this.configs.itemsToShow,
 			this.configs.itemsScrollBy);
-			
+
 			//Determine if the current Web browser has support for CSS3 transformation.
 			this.canTransform = this.CSSSupportCheck("transform");
 
 			this.transformPrefix = this.CSSSupportCheck("transform", true);
 
 			this.transitionPrefix = this.CSSSupportCheck("transition", true);
-			
+
 			//Determine if the current Web browser has support for modern opacity.
 			this.mOpacity = this.CSSSupportCheck("opacity");
-			
+
 			//Determine if the current Web browser has support for CSS3 transition.
 			this.canTransition = this.CSSSupportCheck("transition");
 		},
-		
+
 		setupItems : function(){
 			var s, v, w, x = [], z;
-			
+
 			//Get the slider element
 			s = this.slider;
-			
+
 			//Get the list of direct children of the slider element
 			v = s.children;
-			
+
 			var i = 0;
-			
+
 			while(v[0]){
 				if(v[0].nodeType == 1){
 					if(v[0].nodeName.toLowerCase() == "img"){
 						z = document.createElement("div");
-						
+
 						z.className = this.itemClass+' ot-item-' + i;
-						
+
 						z.innerHTML = '<img src="'+ v[0].src +'" alt="'+ v[0].alt +'" draggable="false">';
-						
+
 						x[i] = z;
 					}else{
 						w = v[0];
-						
+
 						w.className = this.itemClass+' ot-item-' + i;
-						
+
 						x[i] = w;
 					}
-					
+
 					i++;
 				}
-				
+
 				v[0].parentNode.removeChild(v[0]);
 			}
 
@@ -283,25 +283,25 @@ function OTSlider(){
 
 			//Append the created sub container into the created container
 			w.appendChild(z);
-			
+
 			//Now append all items into the created sub container
 			for(var i = 0; i < x.length; i++){
 				z.appendChild(x[i]);
 			}
-			
+
 			//Finaly let's append the container with its children
 			s.appendChild(w);
 
 			this.acn(s, "ot-" + this.configs.transition + "-transition");
 		},
-		
+
 		setupNavs : function(){
 			var e = [], nlc, nn, s, v, w, x, y, pb, nb, its, isb, tni;
-			
-			//Create 2 div elements 
+
+			//Create 2 div elements
 			for(var i = 0, j = 2; i < j ; i++)
 				e[i] = document.createElement("div");
-			
+
 			//Previous and next Buttons
 			v = e[0];
 			v.className = this.prevNextClass;
@@ -311,7 +311,7 @@ function OTSlider(){
 			pb.className = "ot-prev-button";
 			pb.innerHTML = '<span class="ot-wrap-outer"><span class="ot-wrap-inner">'+
 			this.configs.prevButton +'</span></span>';
-			
+
 			nb = document.createElement("span");
 			nb.className = "ot-next-button";
 			nb.innerHTML = '<span class="ot-wrap-outer"><span class="ot-wrap-inner">'+
@@ -319,15 +319,15 @@ function OTSlider(){
 
 			v.appendChild(pb);
 			v.appendChild(nb);
-			
+
 			//Navigation buttons
 			w = e[1];
 			w.className = this.navClass;
 			w.style.display = "none";
-			
+
 			//Get slider's container
 			s = this.slider;
-			
+
 			x = this.gecn(s, this.itemClass)
 
 			its = this.configs.itemsToShow;
@@ -344,9 +344,9 @@ function OTSlider(){
 
 			//Get the default class name for nav's items
 			nlc = this.navListClass;
-			
+
 			nn = this.configs.numericNav;
-			
+
 			y = "<ul>";
 
 			for(var i = 0; i < tni; i++){
@@ -355,71 +355,71 @@ function OTSlider(){
 				else
 					y += '<li class="'+ nlc +'"></li>';
 			}
-			
+
 			y += '</ul>';
-			
+
 			w.innerHTML = y;
-			
+
 			//Append all created container into slider
 			s.appendChild(v);
 			s.appendChild(w);
-			
+
 			if(!this.configs.showPrevNext){
 				v.style.display = "none";
-				
+
 				this.acn(s, "prev-next-hidden");
 			}
-			
+
 			if(!this.configs.showNav){
 				w.style.display = "none";
-				
+
 				this.acn(s, "nav-list-hidden");
 			}
-				
+
 			this.addEvents();
 		},
-		
+
 		setupSlideDOM : function(){
 			var a, b, c, d, e;
-			
+
 			//Get the slider element
 			a = this.slider;
 
 			b = this.gecn(a, this.itemsClass)[0];
 
 			c = this.gecn(b, this.itemClass);
-			
+
 			d = c[0].parentElement;
 
 			e = this.gecn(a, this.navListClass);
-			
+
 			this.sliderItems = c;
-			
+
 			this.sliderItemsParent = d;
-			
+
 			this.sliderNavListItems = e;
-			
+
 			if(this.configs.roundButtons)
 				this.acn(a, "ot-slider-round-buttons");
-			
+
 			if(this.configs.numericNav)
 				this.acn(a, "ot-slider-numeric-nav");
 		},
-		
+
 		setupDimensions : function(f){
 			f = ('boolean' === typeof f) ? f : false;
-			
+
 			var a, b, c, p, s, t, pw, sw, sh, iw, its, ip, dw, dh, wd;
-			
+
 			//Get the slider element
 			s = this.slider;
-			
+
 			//Get slider's parent element
 			p = s.parentElement;
-			
+
 			//Get the container of items
 			a = this.gecn(s, this.itemsClass)[0];
-			
+
 			//Get the items of the slider
 			b = this.gecn(a, this.itemClass);
 
@@ -489,7 +489,7 @@ function OTSlider(){
 					//alongside another.
 					for(var i = 0; i < b.length; i++){
 						b[i].style.width = iw + "px";
-						
+
 						if(sh)
 							b[i].style.height = sh + "px";
 
@@ -541,67 +541,67 @@ function OTSlider(){
 
 		updateSliderHeight : function(x){
 			var ots = OTSlider
-			
+
 		//Only update the height if it was not specified
 		if(!ots.configs.height)
 			ots.setupDimensions(true);
-			
+
 			ots.showNavs();
 		},
-		
+
 		showNavs : function(){
 			var ots = OTSlider, nav, pn;
-			
+
 			//Get the container of previous and next buttons
 			pn = ots.gecn(ots.slider, ots.prevNextClass);
-			
+
 			//Get the container of nav elements
 			nav = ots.gecn(ots.slider, ots.navClass);
-			
+
 			if(ots.configs.showPrevNext){
 				if(pn && pn.length)
-					ots.toggleInlineStyle(pn[0], "display", "block");	
+					ots.toggleInlineStyle(pn[0], "display", "block");
 			}
-			
+
 			if(ots.configs.showNav){
 				if(nav && nav.length)
-					ots.toggleInlineStyle(nav[0], "display", "block");				
+					ots.toggleInlineStyle(nav[0], "display", "block");
 			}
 		},
 
 		addEvents : function(){
 			var a, b, c, d, e, il, s, ots;
-			
+
 			ots = OTSlider;
-			
+
 			//Get slider's container
 			s = this.slider;
-			
+
 			a = this.gecn(s, this.navClass)[0];
-			
+
 			//Get the list of all buttons from nav
 			b = this.gecn(a, this.navListClass);
-			
+
 			//Get the container of previous and next buttons
 			c = this.gecn(s, this.prevNextClass)[0];
-			
+
 			//Get the previous and next buttons
 			d = c.children;
 
 			e = this.gecn(s, this.itemsClass);
-			
+
 			if(window.addEventListener){
 				s.addEventListener("mouseout", function(e){
 					ots.resumeSlider(e);}, false);
-				
+
 				s.addEventListener("mouseover", function(e){
 					ots.pauseSlider(e);}, false);
-				
+
 				for(var i = 0; i < b.length; i++){
 					b[i].addEventListener("click", function(e){
 						ots.navListButton(e);}, false);
 				}
-				
+
 				for(var i = 0; i < d.length; i++){
 					if(d[i].nodeType == 1){
 						if(i < 1){
@@ -613,46 +613,46 @@ function OTSlider(){
 						}
 					}
 				}
-				
+
 				//We must add swipe events?
 				if(this.configs.swipe){
 					for(var i = 0; i < e.length; i++){
 						e[i].addEventListener("mousedown", ots.swipeStart, false);
-						
+
 						e[i].addEventListener("mouseup", ots.swipeEnd, false);
-						
+
 						e[i].addEventListener("mousemove", ots.swipeMove, false);
-						
+
 						e[i].addEventListener("dragstart", function(e){
 							e.preventDefault(); e.stopPropagation();}, false);
-							
+
 						e[i].addEventListener("drag", function(e){
 							e.preventDefault(); e.stopPropagation();}, false);
-							
+
 						e[i].addEventListener("touchstart", ots.swipeStart, false);
-						
+
 						e[i].addEventListener("touchend", ots.swipeEnd, false);
-						
+
 						e[i].addEventListener("touchcancel", ots.swipeCancel, false);
-						
+
 						e[i].addEventListener("touchmove", ots.swipeMove, false);
 					}
 				}
-				
+
 				window.addEventListener("resize", function(){
 					ots.resizeHandler();}, false);
 			}else{
 				s.attachEvent("onmouseout", function(e){
 					ots.resumeSlider(e);}, false);
-				
+
 				s.attachEvent("onmouseover", function(e){
 					ots.pauseSlider(e);}, false);
-				
+
 				for(var i = 0; i < b.length; i++){
 					b[i].attachEvent("onclick", function(e){
 						ots.navListButton(e);}, false);
 				}
-				
+
 				for(var i = 0; i < d.length; i++){
 					if(d[i].nodeType == 1){
 						if(i < 1){
@@ -664,7 +664,7 @@ function OTSlider(){
 						}
 					}
 				}
-				
+
 				window.attachEvent("onresize", function(){
 					ots.resizeHandler();});
 			}
@@ -680,11 +680,11 @@ function OTSlider(){
 				}
 			}
 		},
-		
+
 		toggleInlineStyle : function(e, p, pv){
 			if("undefined" === typeof e || e.nodeType != 1)
 				return;
-				
+
 			if(!("string" === typeof p &&
 			p.replace(/(\s)+|(\s\s)+/gi, "").length))
 				return;
@@ -700,15 +700,15 @@ function OTSlider(){
 				a = e.getAttribute("style").toLowerCase();
 				a = a.replace(/(\;)$/gi, "");
 				a = a.split(";");
-				
+
 				for(var i = 0; i < a.length; i++){
 					b = a[i].split(":");
-					
+
 					if(b[0].replace(/(\s|\s\s)+/gi, "") !== p && b[1]){
 						c = c + b[0] +":"+ b[1] +";";
 					}
 				}
-				
+
 				//We've removed the specified property from the inline style
 				e.setAttribute("style", c);
 			}
@@ -739,7 +739,7 @@ function OTSlider(){
 			rp = (rp && "boolean" === typeof rp) ? rp : false;
 
 			var pp = ["-ms-", "-o-", "-webkit-", "-moz-", ""],
-			
+
 			e = document.createElement("div");
 
 			for(var i = (pp.length - 1); i > 0; i--){
@@ -758,27 +758,27 @@ function OTSlider(){
 
 			this.isSliding = this.isFading = this.isJumping =
 			this.isResizing = false;
-			
+
 			var a, b, c, e, f, h, j, k, items, its, ti;
-			
+
 			a = this.itemWidth * this.configs.itemsScrollBy;
-			
+
 			b = this.totalItemsWidth;
-			
+
 			e = this.configs.transitionDuration;
-			
+
 			f = this.slideFPS;
-			
+
 			//Get all items within slider
 			items = this.sliderItems;
-			
+
 			//The amount of time in miliseconds that each frame is displayed
 			this.realEffectDuration = (e / f) / (e / 1000);
-			
+
 			this.slideBy = (a / f) / (e / 1000);
-			
+
 			this.slideByReset = (b / f) / (e / 1000);
-			
+
 			ti = this.sliderItems.length;
 
 			its = this.configs.itemsToShow;
@@ -786,45 +786,45 @@ function OTSlider(){
 			if(this.isStartUp){
 				if(this.configs.direction === 'rtl'){
 					this.currentItemIndex = (ti > its) ? ti - its : 0;
-					
+
 					//The current active item index
 					c = this.currentItemIndex;
-					
+
 					//This array contain the beginning of left  absolute
 					//position of each item.
 					h = this.itemStartPosition;
 
 					j = h[c];
 					j = this.dynamicLeft(j - j * 2);
-					
+
 					if(this.configs.transition === "slide"){
 						this.__setSliderLeft(j);
-						
+
 						this.left = j;
 					}
-					
+
 					this.acn(items[c], "active");
 				}else{
 					if(this.configs.transition === "slide"){
 						this.__setSliderLeft(0);
-						
+
 						this.left = 0;
 					}
 				}
-				
+
 				//The list of button from nav
 				k = this.sliderNavListItems;
-				
+
 				//Add the active class to the index(es) of displayed item(s)
 				this.acn(k[(this.configs.direction === "ltr") ? 0 : k.length - 1], "active");
-				
+
 				if(this.configs.transition === "slide"){
 					this.isStartUp = false;
 
 					this.canSlide = (ti > its) ? true : false;
 				}
 			}
-			
+
 			if(this.configs.transition === 'slide'){
 				//Carousel Slide
 				this.carousel();
@@ -833,13 +833,13 @@ function OTSlider(){
 				this.fade();
 			}
 		},
-		
+
 		carousel : function(){
 			if(!this.configs.autoPlay || !this.canSlide)
 				return;
-			
+
 			var a, b, d, ots = OTSlider;
-			
+
 			a = ots.canTransition;
 
 			b = ots.configs.direction;
@@ -862,33 +862,33 @@ function OTSlider(){
 				}
 			}
 		},
-		
+
 		fade : function(){
 			var a, d, e, f, g, mo, dur, ots = OTSlider, fps;
-			
+
 			if(this.isStartUp){
 				mo = this.mOpacity;
-			
+
 				//Get the list of all items
 				a = this.sliderItems
-			
+
 				//Get the list of all items
 				d = this.sliderItems;
-			
+
 				//Get the list of buttons of nav
 				e = this.sliderNavListItems;
-				
+
 				f = this.configs.transitionDuration;
-			
+
 				//If the direction is ltr(lert to right), we start from the
 				//first item(difault) else we start from the last item.
 				g = (this.configs.direction === "ltr") ? 0 : a.length - 1;
-			
+
 				//Add the active class to the first or last item element
 				for(var i = 0; i < d.length; i++){
 					if(i == g){
 						this.acn(d[i], "active");
-					
+
 						if(mo){
 							d[i].style.opacity = 1;
 						}else{
@@ -899,7 +899,7 @@ function OTSlider(){
 						d[i].style.display = "block";
 
 						this.acn(e[i], "active");
-					
+
 						this.currentItemIndex = i;
 					}else{
 						if(mo){
@@ -912,69 +912,69 @@ function OTSlider(){
 						d[i].style.display = "none";
 					}
 				}
-				
+
 				//Get effect's FPS
 				fps = this.slideFPS;
-				
+
 				//Determine the value that must incremented/descremented on
 				//each frame of the fade effect.
 				this.slideFadeBy = (1 / (fps * (f / 1000)));
-				
+
 				//Determine the amount of time in miliseconds that each frame
 				//is displayed.
 				this.realEffectDuration = (f / (fps * (f / 1000)));
-			
+
 				//This will determine if the ongoing effect is completed or
 				//not yet.
 				this.fadeEffectCompleted = 0;
-			
+
 				this.isStartUp = false;
 			}
-			
+
 			dur = this.configs.duration;
-			
+
 			if(!this.configs.autoPlay)
 				return;
-			
+
 			if(this.configs.direction === "ltr"){
 				this.slideStarted = setInterval(ots.fadeStart, dur);
-			}else{				
+			}else{
 				this.slideStarted = setInterval(function(){
 					ots.fadeStart(false);}, dur);
 			}
 		},
-		
+
 		fadeStart  : function(f, jumpTo){
 			f = ('boolean' === typeof f) ? f : true;
-			
+
 			var a, b, d, e, ots = OTSlider;
-			
+
 			//Get the total number of items within the slider
 			a = ots.sliderItems
-			
+
 			//Get the index of the current item
 			b = ots.currentItemIndex;
-			
+
 			d = (ots.swipeDuration && "number" === ots.swipeDuration) ?
 			ots.swipeDuration / ots.slideFPS : ots.realEffectDuration;
-			
+
 			//Get all nav items
 			e = ots.sliderNavListItems;
-			
+
 			if(ots.isFading || ots.isJumping)
 				return;
-			
+
 			if(ots.slideStarted){
 				clearInterval(ots.slideStarted);
-				
+
 				if(ots.fadeEffectCompleted)
 					ots.stopFadeEffect();
 			}
-			
+
 			if(typeof jumpTo !== "undefined" && jumpTo.nodeType == 1){
 				for(var i = 0; i < a.length; i ++){
 					if(e[i] == jumpTo)
-						ots.targetItemIndex = i; 
+						ots.targetItemIndex = i;
 				}
 			}else{
 				//Determine the index of the target item
@@ -1004,27 +1004,27 @@ function OTSlider(){
 				ots.slideEffectStarted = setInterval(ots.fadeEffect, d);
 			}
 		},
-		
+
 		fadeEffect : function(){
 			var a, b, c, d, e, o, ots = OTSlider;
-			
+
 			//Get all the items of the slider
 			a = ots.sliderItems
-			
+
 			//Get the index of the current item
 			b = ots.currentItemIndex;
-			
+
 			//Get the index of the target item
 			c = ots.targetItemIndex;
-			
+
 			//Get the value that will be used to increment/descrement the
 			//opacity of the items.
 			d = ots.slideFadeBy;
-			
+
 			e = ots.fadeEffectCompleted;
-			
+
 			o = ots.mOpacity;
-			
+
 			if((e + d) >= 1){
 				//Completly hide the item that was displayed and completly
 				//show the target item.
@@ -1035,7 +1035,7 @@ function OTSlider(){
 					a[b].style.filter = "alpha(opacity=0)";
 					a[c].style.filter = "alpha(opacity=100)";
 				}
-				
+
 				ots.stopFadeEffect();
 			}else{
 				if(o){
@@ -1045,26 +1045,26 @@ function OTSlider(){
 					a[b].style.filter = "alpha(opacity=" + (100 - ((e + d) * 100)) + ")";
 					a[c].style.filter = "alpha(opacity=" + ((e + d) * 100) + ")";
 				}
-				
+
 				ots.fadeEffectCompleted += d;
 			}
 		},
 
 		stopFadeEffect : function(){
 			var a, b, d, e, f, o, ots = OTSlider;
-			
+
 			a = ots.sliderItems;
-			
+
 			b = ots.sliderNavListItems;
-			
+
 			d = ots.configs.duration;
-			
+
 			e = ots.targetItemIndex;
-			
+
 			f = ots.currentItemIndex;
-			
+
 			o = ots.mOpacity;
-			
+
 			if(ots.isFading){
 				if(o){
 					a[f].style.opacity = 0
@@ -1072,12 +1072,12 @@ function OTSlider(){
 					a[f].style.filter = "alpha(opacity=0)";
 				}
 			}
-			
+
 			for(var i = 0; i < a.length; i++){
 				if(e == i){
 					ots.acn(a[i], "active");
 					ots.acn(b[i], "active");
-					
+
 					if(o){
 						a[i].style.opacity = 1;
 					}else{
@@ -1090,24 +1090,24 @@ function OTSlider(){
 					a[i].style.display = "none";
 				}
 			}
-			
+
 			//Stop fade effect, because we're already done
 			clearInterval(ots.slideEffectStarted);
-			
+
 			//Because we're done, the index of the target item will now be
 			//the current item.
 			ots.currentItemIndex = e;
-			
+
 			if(ots.slideStarted)
 				clearInterval(ots.slideStarted);
-			
+
 			//Reset some values
 			ots.isSliding = ots.isJumping = ots.isFading =
 			ots.fadeEffectCompleted = ots.slideStarted =
 			ots.slideEffectStarted = false;
-			
+
 			ots.targetItemIndex = ots.swipeDuration = null;
-			
+
 			if(ots.configs.autoPlay){
 				if(ots.configs.direction === "ltr"){
 					ots.slideStarted = setInterval(ots.fadeStart, d);
@@ -1207,7 +1207,7 @@ function OTSlider(){
 				return;
 
 			clearInterval(ots.slideEffectStarted);
-			
+
 			if(ots.slideStarted)
 				clearInterval(ots.slideStarted);
 
@@ -1229,7 +1229,7 @@ function OTSlider(){
 				k = ots.itemEndPosition;
 
 				c = ots.currentItemIndex;
-				
+
 				d = ots.sliderItemsParent;
 
 				if(x && x.nodeType == 1){
@@ -1427,7 +1427,7 @@ function OTSlider(){
 		*/
 		dynamicItemIndex : function(l){
 			var ots = OTSlider, t, x, iw, isp, its, tiw, index, z;
-			
+
 			l = ("number" === typeof l) ? l : ots.left;
 			l = Math.abs(l);
 
@@ -1458,7 +1458,7 @@ function OTSlider(){
 					}
 				}
 			}
-			
+
 			return index;
 		},
 
@@ -1484,17 +1484,17 @@ function OTSlider(){
 
 		stopSlideEffect : function(x){
 			x = ('boolean' === typeof x) ? x : true;
-			
+
 			var ots = OTSlider, d, t;
 
 			t = ots.canTransition;
-			
+
 			//Stop slide effect
 			clearInterval(ots.slideEffectStarted);
 			clearInterval(ots.slideStarted);
-			
+
 			ots.slideTrack();
-			
+
 			if(x){
 				if(this.configs.autoPlay){
 					d = ots.configs.duration ;
@@ -1514,15 +1514,15 @@ function OTSlider(){
 
 		slideTrack : function(){
 			var a, b, c, ots = OTSlider, isb;
-			
+
 			c = ots.currentItemIndex;
-			
+
 			a = ots.sliderItems;
-			
+
 			b = ots.sliderNavListItems;
 
 			isb = ots.configs.itemsScrollBy;
-			
+
 			for(var i = 0; i < a.length; i++){
 				if(i == c){
 					//Add the class that is used to identify the current
@@ -1548,7 +1548,7 @@ function OTSlider(){
 			}
 
 			ots.swipeDuration = null;
-			
+
 			if(ots.configs.transition === "slide")
 				ots.slideJumpTo = ots.slideJumpToItemIndex = ots.slideJumpToBy = null;
 
@@ -1561,21 +1561,21 @@ function OTSlider(){
 		navListButton : function(e){
 			if(window.preventDefault)
 				e.preventDefault();
-			
+
 			if(window.stopPropagation)
 				e.stopPropagation();
-			
+
 			if(!this.canSlide || this.isSliding || this.isFading)
 				return;
-			
+
 			//Get the element on which the event occurred
 			e = e.target || e.srcElement;
-			
+
 			var a, c, t, ti, isb, its;
-			
+
 			if(this.configs.transition === "slide"){
 				a = this.itemStartPosition;
-			
+
 				c = this.sliderNavListItems;
 
 				isb = this.configs.itemsScrollBy;
@@ -1583,7 +1583,7 @@ function OTSlider(){
 				its = this.configs.itemsToShow;
 
 				ti = this.sliderItems.length;
-			
+
 				for(var i = 0; i < c.length; i++){
 					if(c[i] == e){
 						if((c.length - 1) == i){
@@ -1595,37 +1595,37 @@ function OTSlider(){
 						}
 					}
 				}
-			
+
 				//Return if click on the button that is the reference of
 				//current displayed item.
 				if(e == this.currentItemIndex)
 					return;
-				
+
 				this.slideJumpTo = t;
-				
+
 				this.currentItemIndex = e;
-				
+
 				this.genericSlide(null, true);
 			}else{
 				if(this.hcn(e, "active"))
 					return;
-				
+
 				this.fadeStart(true, e);
 			}
 		},
-		
+
 		prevItem : function(e){
 			if(window.preventDefault)
 				e.preventDefault();
-			
+
 			if(window.stopPropagation)
 				e.stopPropagation();
-			
+
 			if(!this.canSlide)
 				return;
-			
+
 			clearInterval(this.slideStarted);
-			
+
 			//Show the previous item
 			if(this.configs.transition === "slide"){
 				if(this.canTransition)
@@ -1636,19 +1636,19 @@ function OTSlider(){
 				this.fadeStart(false);
 			}
 		},
-		
+
 		nextItem : function(e){
 			if(window.preventDefault)
 				e.preventDefault();
-			
+
 			if(window.stopPropagation)
 				e.stopPropagation();
-			
+
 			if(!this.canSlide)
 				return;
-			
+
 			clearInterval(this.SlideStarted);
-			
+
 			//Show the next item
 			if(this.configs.transition === "slide"){
 				if(this.canTransition)
@@ -1659,35 +1659,35 @@ function OTSlider(){
 				this.fadeStart();
 			}
 		},
-		
+
 		pauseSlider : function(e){
 			if(window.preventDefault)
 				e.preventDefault();
 
 			var ots = OTSlider;
-			
+
 			if(!ots.configs.pauseOnHover)
 				return;
-			
+
 			clearInterval(ots.slideStarted);
 		},
-		
+
 		resumeSlider : function(e){
 			if(window.preventDefault)
 				e.preventDefault();
-			
+
 			var d, t, ots = OTSlider;
 
 			if(!ots.canSlide)
 				return;
-			
+
 			if(!ots.configs.pauseOnHover)
 				return;
-			
+
 			clearInterval(ots.slideStarted);
 
 			t = ots.canTransition;
-			
+
 			if(ots.configs.autoPlay){
 				d = ots.configs.duration;
 
@@ -1704,7 +1704,7 @@ function OTSlider(){
 				}else{
 					if(ots.isFading)
 						return
-					
+
 					if(ots.configs.direction === "ltr"){
 						ots.slideStarted = setInterval(ots.fadeStart, d);
 					}else{
@@ -1714,14 +1714,14 @@ function OTSlider(){
 				}
 			}
 		},
-		
+
 		swipeStart : function(x){
 			x.preventDefault();
-			
+
 			x.stopPropagation();
-			
+
 			var ct, ots = OTSlider;
-			
+
 			if(!ots.canSlide || ots.isSliding || ots.isFading)
 				return;
 
@@ -1730,7 +1730,7 @@ function OTSlider(){
 
 			//Get the current touch elements
 			ct = (x.changedTouches) ? x.changedTouches[0] : x;
-			
+
 			//Create new object with current finger position on x or y eixes.
 			ots.swipeEvents = {
 				pageX : ct.pageX,
@@ -1744,20 +1744,20 @@ function OTSlider(){
 				isTouch : (x.type.toLowerCase() === "touchstart") ?
 				true : false
 			};
-			
+
 			ots.isSliding = true;
 		},
-		
+
 		swipeEnd : function(x){
 			x.preventDefault();
-			
+
 			var se, ots = OTSlider, l, isp, cii, ciisp, sd, z, f;
-			
+
 			if(!(ots.swipeEvents && ots.swipeEvents.pageX))
 				return;
-			
+
 			se = ots.swipeEvents;
-			
+
 			//Determine the amount of time that the swipe took
 			 sd = new Date().getTime() - se.startTimestamp;
 			 ots.swipeDuration = Math.min(sd, 500 );
@@ -1773,7 +1773,7 @@ function OTSlider(){
 				cii = ots.dynamicItemIndex();
 
 				z = Math.abs(ots.dynamicLeft(isp[cii])) - l;
-				
+
 				//Determine the swiped distance between the current item and
 				//its siblings.
 				z = Math.abs(z / ots.itemWidth * 100);
@@ -1812,40 +1812,40 @@ function OTSlider(){
 
 			ots.swipeEvents = {};
 		},
-		
+
 		swipeCancel : function(x){
 			x.preventDefault();
 
 			ots.swipeEnd();
 		},
-		
+
 		swipeMove : function(x){
 			x.preventDefault();
-			
+
 			var ots = OTSlider;
-			
+
 			if(!(ots.swipeEvents && ots.swipeEvents.pageX && ots.isSliding))
 				return;
-			
+
 			var l, sb, se, sd, ct, ts, psx, psy, csx, csy, sw, tiw, nl, sll;
-			
+
 			//Get the previous swipe details
 			se = ots.swipeEvents;
-			
+
 			if("boolean" !== typeof se.isTouch)
 				return;
-			
+
 			//Get the current swipe datails
 			ct = (x.changedTouches) ? x.changedTouches[0] : x;
-			
+
 			//Get the previous finger position at x or y eixes
 			psx = se.pageX;
 			psy = se.pageY;
-			
+
 			//Get the current finger position at x or y eixes
 			csx = ct.pageX;
 			csy = ct.pageY
-			
+
 			//Let's get swiped direction
 			sd = ots.swipeDirection(psx, psy, csx, csy);
 
@@ -1866,11 +1866,11 @@ function OTSlider(){
 				ts = se.totalSwiped;
 
 				ts = (sd == 0) ? ts - sb : ts + sb;
-				
+
 				if(ots.configs.transition === "slide"){
 					//Get the current left position
 					l = Math.abs(ots.left);
-					
+
 					if(sd == 0){//Swipe to left
 						nl = l + sb;
 
@@ -1900,10 +1900,10 @@ function OTSlider(){
 					ots.swipeEvents.totalSwipedPerc =
 					Math.floor((ct.pageX - se.startX) / ots.itemWidth * 100);
 				}
-				
+
 				ots.swipeEvents.totalSwiped = ts;
 			}
-			
+
 			//We're done at this time, so let's save the current finger's
 			//position. In order to use it the next time as previous finger's
 			//position.
@@ -1928,43 +1928,43 @@ function OTSlider(){
 			"number" === typeof csx && "number" === typeof csy)){
 				return
 			}
-			
+
 			return (csx > psx) ? 1 : 0;
 		},
-		
+
 		resizeHandler : function(){
 			var a, b, d;
-			
+
 			this.isResizing = true;
-			
+
 			if(this.slideStarted)
 				clearInterval(this.slideStarted);
-			
+
 			//We must recalculate the dimensions of the slider and it's items
 			//each time the window get resized.
 			this.setupDimensions(true);
-			
+
 			//The array which contain the start position of each item
 			a = this.itemStartPosition;
-			
+
 			//Get the current displayed item
 			b = this.currentItemIndex;
-			
+
 			if(this.configs.transition === "slide"){
 				d = a[b];
 
 				//If the current position of the parent of items is negative,
 				//we must keep it negative else positive.
 				d = (/(\-)/.test(this.left)) ? (d - d * 2) : d;
-				
+
 				this.__setSliderLeft(this.dynamicLeft(d));
 
 				this.left = this.dynamicLeft(d);
 			}
-			
+
 			this.slideInit();
 		},
-		
+
 		//This method is used to check if an HTML element has the
 		//specified class.
 		hcn : function(e, c){
@@ -1973,79 +1973,79 @@ function OTSlider(){
 
 			if(!(c && "string" === typeof c))
 				throw new Error("The className was not specified on hcn method");
-	
+
 			//Create any array that contain all the classes of the specified
 			//HTML element.
 			var x = e.className.split(" ");
-			
+
 			for(var i = 0; i <= x.length; i++){
 				if(/[A-Za-z0-9]/i.test(x[i]) && x[i] === c)
 					return true;
 			}
-				
+
 			return false;
 		},
-		
+
 		//This method is used to remove an class from the
 		//specified HTML element.
 		rcn : function(e, c){
 			if(!(e && e.nodeType == 1))
 				throw new Error("No element specified on rcn method");
-			
+
 			if(!(c && "string" === typeof c))
 				throw new Error("The className was not specified on rcn method");
-			
+
 			//Create any array of all classes of the specified HTML element
 			var x = e.className.split(" ");
-			
+
 			for(var i = 0; i <= x.length; i++){
 				if(/[A-Za-z0-9]/i.test(x[i]) && x[i] === c)
 					x[i] = "";
 			}
-			
+
 			e.className = x.join(" ").replace(/(\s\s+|\s)/gi, " ").
 			replace(/^(\s)|(\s)$/gi, "");
 		},
-		
+
 		//This method is used to add an class to the specified HTML
 		//element.
 		acn : function(e, c){
 			if(!(e && e.nodeType == 1))
 				throw new Error("The element was not specified or is invalid.");
-			
+
 			if(!(c && "string" === typeof c))
 				throw new Error("The class must be valid string.");
-			
+
 			var x = e.className.split(" ");
-			
+
 			for(var i = 0; i < x.length; i++){
 				if(/[A-Za-z0-9]/gi.test(x[i]) && x[i] === c)
 					x[i] = "";
 			}
-			
+
 			//Add the specified class to the array
 			x[x.length + 1] = c;
-			
+
 			e.className = x.join(" ").replace(/(\s\s+|\s)/gi, " ").
 			replace(/^(\s)|(\s)$/gi, "");
 		},
-		
+
 		//This method has the same function as getElementsByClassName
 		gecn : function(e, c){
 			if(!(e && e.nodeType == 1))
 				throw new Error("The first argument must be an HTML element");
-			
+
 			if(!(c && "string" === typeof c))
 				throw new Error("The className is undefined");
-			
+
 			c = c.split(" ").join(".");
-			
+
 			if(c !== "*")
 				c = "."+c;
-			
+
 			return e.querySelectorAll(c);
 		}
 	};
-	
+
 	return OTSlider;
 };
