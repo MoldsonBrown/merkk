@@ -59,7 +59,7 @@ function OTSlider(){
 			responsive : true,
 			roundButtons : false,
 			numericNav : true,
-			centered : false,
+			centered : true,
 		},
 
 		init : function(configs){
