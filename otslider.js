@@ -57,9 +57,9 @@ function OTSlider(){
 			swipe : true,
 			swipeFreely : false,
 			responsive : true,
-			roundButtons : true,
+			roundButtons : false,
 			numericNav : true,
-			centered : true,
+			centered : false,
 		},
 
 		init : function(configs){
