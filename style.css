@@ -2,6 +2,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.works {
+  height: 80vh;
+}
+.works img {
+  align-items: center;
+}
+
 .icon {
   height: 40px;
   width: 40px;
@@ -17,7 +24,7 @@ html {
 }
 
 .sections {
-  height: 93vh;
+
   width: 100vw;
 }
 
@@ -26,6 +33,7 @@ html {
   color: #fffd77;
   font-size: 100px;
   font-family: 'Poppins', sans-serif;
+  margin-bottom: 1px;
 }
 
 .menu {
@@ -45,7 +53,7 @@ html {
 }
 .menu p {
   margin: 0;
-  line-height: 1.3em;
+  line-height: 1em;
 }
 
 a {
