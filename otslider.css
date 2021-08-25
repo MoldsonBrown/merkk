@@ -47,12 +47,12 @@
 	position:absolute;
 }
 .ot-slider .ot-items .ot-item img{
-	width:70%;
+	width:100%;
 	height:auto;
 }
 .ot-slider .ot-nav{
 	position:absolute;
-	width:70%;
+	width:100%;
 	left:0;
 	bottom:0;
 	background:transparent;
