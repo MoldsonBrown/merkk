@@ -1442,6 +1442,7 @@ p.opens {
     max-width: 100%;
     font-size: 0;
     line-height: 0;
+    margin-bottom: -1px;
 }
 
 .grid-sizer {
