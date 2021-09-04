@@ -69,9 +69,6 @@ body a {
     transition: color .3s ease;
 }
 
-body a:hover {
-    color: #8cccce;
-}
 
 body p,
 body pre {
@@ -559,9 +556,10 @@ background-color: lemonchiffon;
 }
 
 .info-code {
-  background-color: #f68c64;
+  background-color: #8cccce;
   padding: 20px;
   border-radius: 8px;
+  font-family: 'Hind Guntur', sans-serif;
 }
 
 .info-code-title {
@@ -578,6 +576,7 @@ background-color: lemonchiffon;
     color: #fff;
     margin-bottom: 6px;
     line-height: 1.4em;
+    font-size: 15px;
 }
 
 .tp-bullet-title {
@@ -761,6 +760,10 @@ body .social a:hover {
 
 .two_third {
     width: 64%;
+    font-family: 'Hind Guntur', sans-serif;
+    text-align: justify;
+    font-size: 93%;
+    line-height: 25px;
 }
 
 .one_fourth {
@@ -1065,7 +1068,8 @@ a.button-dot:hover:before {
     3. Home Section CSS
 ====================================== */
 .entry-taitl {
-font-size: 27px;
+font-size: 25px;
+font-family: 'Fira Sans';
 /* line-height: 149%; */
 /* font-weight: 400; */
 word-break: break-word;
@@ -1090,19 +1094,15 @@ letter-spacing: 2px;
 
 @keyframes slideBg2 {
   0% {
-    background-image: url(images/SP_03.jpg);
+    background-image: url(images/SP_1.jpg);
     left:0;
   }
-  40% {
-    background-image: url(images/SP_02.jpg);
-    left:0;
-  }
-  80% {
-    background-image: url(images/SP_01.jpg);
+  50% {
+    background-image: url(images/SP_2.jpg);
     left:0;
   }
   100% {
-    background-image: url(images/SP_04.jpg);
+    background-image: url(images/SP_3.jpg);
     left:0;
   }
 }
@@ -1175,7 +1175,7 @@ h1.big-text {
 
 a.titulo1 {
   color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Fira Sans';
   font-size: 53px;
   opacity: 87%;
   text-align: center;
@@ -1192,7 +1192,7 @@ a.titulo2 {
 
 a.titulo3 {
   color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Fira Sans';
   font-size: 33px;
   opacity: 87%;
   text-align: center;
