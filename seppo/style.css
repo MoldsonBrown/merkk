@@ -1172,7 +1172,7 @@ letter-spacing: 2px;
     backface-visibility: hidden;
     min-height: calc(100vh - 77px);
     display: flex;
-    filter: grayscale(16%);
+    filter: grayscale(12%);
     animation: slideBg 20s linear infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
