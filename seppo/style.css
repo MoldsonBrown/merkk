@@ -562,6 +562,13 @@ background-color: lemonchiffon;
   font-family: 'Hind Guntur', sans-serif;
 }
 
+.info-code2 {
+  background-color: #669acc;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
 .info-code-title {
     font-size: 16px;
     color: #fff;
@@ -1077,16 +1084,58 @@ word-break: break-word;
 color: black;
 letter-spacing: 2px;
 }
-
-#southern {
-    background-image: url(images/desierto.jpg);
+#lake {
+    background-image: url(images/PL_1.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     backface-visibility: hidden;
     min-height: calc(60vh - 77px);
     display: flex;
-    filter: grayscale(16%);
+    animation: slideBg3 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes slideBg3 {
+  0% {
+    background-image: url(images/PL_1.jpg);
+    left:0;
+  }
+  20% {
+    background-image: url(images/PL_2.jpg);
+    left:0;
+  }
+  50% {
+    background-image: url(images/PL_3.jpg);
+    left:0;
+  }
+  75% {
+    background-image: url(images/PL_4.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/PL_5.jpg);
+    left:0;
+  }
+}
+
+#lake .hidden {
+  display: none;
+}
+#lake .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
+#southern {
+    background-image: url(images/SP_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
     animation: slideBg2 20s linear infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
