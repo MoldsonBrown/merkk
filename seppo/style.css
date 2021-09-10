@@ -1340,6 +1340,50 @@ letter-spacing: 2px;
     padding: 0;
 }
 
+#northern {
+    background-image: url(images/Norte_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
+    animation: slideBg8 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes slideBg8 {
+  0% {
+    background-image: url(images/Norte_1.jpg);
+    left:0;
+  }
+  30% {
+    background-image: url(images/Norte_2.jpg);
+    left:0;
+  }
+  60% {
+    background-image: url(images/Norte_3.jpg);
+    left:0;
+  }
+  80% {
+    background-image: url(images/Norte_4.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/Norte_5.jpg);
+    left:0;
+  }
+}
+
+#northern .hidden {
+  display: none;
+}
+#northern .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
 #southern {
     background-image: url(images/SP_1.jpg);
     background-position: center center;
