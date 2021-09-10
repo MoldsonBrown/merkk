@@ -1164,10 +1164,54 @@ letter-spacing: 2px;
   }
 }
 
-#lake .hidden {
+#central .hidden {
   display: none;
 }
-#lake .section-wrapper {
+#central .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
+#peninsula {
+    background-image: url(images/peninsula_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
+    animation: slideBg4 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes slideBg4 {
+  0% {
+    background-image: url(images/peninsula_1.jpg);
+    left:0;
+  }
+  20% {
+    background-image: url(images/peninsula_2.jpg);
+    left:0;
+  }
+  50% {
+    background-image: url(images/peninsula_3.jpg);
+    left:0;
+  }
+  75% {
+    background-image: url(images/peninsula_4.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/peninsula_5.jpg);
+    left:0;
+  }
+}
+
+#peninsula .hidden {
+  display: none;
+}
+#peninsula .section-wrapper {
     margin: auto;
     padding: 0;
 }
