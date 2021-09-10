@@ -1384,6 +1384,46 @@ letter-spacing: 2px;
     padding: 0;
 }
 
+#cordoba {
+    background-image: url(images/Cordoba_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
+    animation: slideBg9 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes slideBg9 {
+  0% {
+    background-image: url(images/Cordoba_1.jpg);
+    left:0;
+  }
+  40% {
+    background-image: url(images/Cordoba_2.jpg);
+    left:0;
+  }
+  80% {
+    background-image: url(images/Cordoba_3.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/Cordoba_4.jpg);
+    left:0;
+  }
+}
+
+#cordoba .hidden {
+  display: none;
+}
+#cordoba .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
 #southern {
     background-image: url(images/SP_1.jpg);
     background-position: center center;
