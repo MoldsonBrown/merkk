@@ -1128,6 +1128,50 @@ letter-spacing: 2px;
     padding: 0;
 }
 
+#central {
+    background-image: url(images/central_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
+    animation: slideBg4 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes slideBg4 {
+  0% {
+    background-image: url(images/central_1.jpg);
+    left:0;
+  }
+  20% {
+    background-image: url(images/central_2.jpg);
+    left:0;
+  }
+  50% {
+    background-image: url(images/central_3.jpg);
+    left:0;
+  }
+  75% {
+    background-image: url(images/central_4.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/central_5.jpg);
+    left:0;
+  }
+}
+
+#lake .hidden {
+  display: none;
+}
+#lake .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
 #southern {
     background-image: url(images/SP_1.jpg);
     background-position: center center;
