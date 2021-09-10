@@ -1256,6 +1256,50 @@ letter-spacing: 2px;
     padding: 0;
 }
 
+#mendo {
+    background-image: url(images/Mendo_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
+    animation: slideBg6 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes slideBg6 {
+  0% {
+    background-image: url(images/Mendo_1.jpg);
+    left:0;
+  }
+  30% {
+    background-image: url(images/Mendo_2.jpg);
+    left:0;
+  }
+  50% {
+    background-image: url(images/Mendo_3.jpg);
+    left:0;
+  }
+  75% {
+    background-image: url(images/Mendo_4.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/Mendo_5.jpg);
+    left:0;
+  }
+}
+
+#mendo .hidden {
+  display: none;
+}
+#mendo .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
 #southern {
     background-image: url(images/SP_1.jpg);
     background-position: center center;
