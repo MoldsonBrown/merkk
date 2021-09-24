@@ -1,36 +1,3 @@
-/*------------------------------------------------------------------
-[Table of contents]
-1. 3rd Part CSS Libraries
-2. Global CSS
-        2.1 Global Header Logo/Menu CSS
-        2.2 General Section CSS
-        2.3 Columns CSS
-        2.4 Button CSS
-        2.5 Image/Text Slider CSS
-3. Home Section CSS
-4. Services Section CSS
-5. About Section CSS
-6. Clients Section CSS
-7. News Section CSS
-8. Portfolio Section CSS
-        8.1 Single Portfolio
-9. Pricing Section CSS
-10. Team Section CSS
-11. Skills Section CSS
-12. Milestones Section CSS
-13. Blog Page CSS
-14. Single Post CSS
-        14.1 Tipper CSS
-15. Contact Section CSS
-16. Footer CSS
-17. Responsive CSS
--------------------------------------------------------------------*/
-
-
-/* ===================================
-    1. 3rd Part CSS Libraries
-====================================== */
-
 @import url("css/clear.css");
 @import url("css/font-awesome.min.css");
 @import url("css/sm-clean.css");
@@ -42,11 +9,6 @@
   src: url("C:/Users/Moldson/Desktop/merkk/seppo/fonts/Market Fresh ALL CAPS.ttf");
 }
 
-
-
-/* ===================================
-    2. Global CSS
-====================================== */
 
 .color-filter1 {
   filter: invert(15%) sepia(83%) saturate(1619%) hue-rotate(167deg) brightness(90%) contrast(101%);
@@ -71,9 +33,6 @@
 .color-filter7 {
   filter: invert(58%) sepia(24%) saturate(604%) hue-rotate(172deg) brightness(95%) contrast(96%);
 }
-
-
-
 
 .textodale {
   padding-top: 20px
@@ -1398,6 +1357,46 @@ letter-spacing: 2px;
   display: none;
 }
 #iguazu .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
+#uru {
+    background-image: url(images/Uru_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(60vh - 77px);
+    display: flex;
+    animation: slideBg11 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes slideBg11 {
+  0% {
+    background-image: url(images/Uru_1.jpg);
+    left:0;
+  }
+  30% {
+    background-image: url(images/Uru_2.jpg);
+    left:0;
+  }
+  65% {
+    background-image: url(images/Uru_3.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/Uru_4.jpg);
+    left:0;
+  }
+}
+
+#uru .hidden {
+  display: none;
+}
+#uru .section-wrapper {
     margin: auto;
     padding: 0;
 }
