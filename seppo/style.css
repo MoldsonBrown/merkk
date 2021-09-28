@@ -113,10 +113,6 @@ body pre {
     padding: 101px 0 34px 0;
 }
 
-/* ===================================
-    2.1 Global Header Logo/Menu CSS
-====================================== */
-
 .header-holder {
     z-index: 99 !important;
     background-color: #ffffff;
@@ -325,10 +321,6 @@ background-color: lemonchiffon;
     border-radius: 5px;
 }
 
-
-/* ===================================
-    2.2 General Section CSS
-====================================== */
 
 .fila {
   gap: 4px;
@@ -632,11 +624,6 @@ body .social a:hover {
     opacity: 0.5;
 }
 
-
-/* ===================================
-    2.3 Columns CSS
-====================================== */
-
 .buttonClass {
     color: #fff;
     background-color: #f68c64;
@@ -822,11 +809,6 @@ body .social a:hover {
     width: 75%;
 }
 
-
-/* ===================================
-    2.4 Button CSS
-====================================== */
-
 body a.button {
     display: inline-block;
     color: #fff;
@@ -889,11 +871,6 @@ a.button-dot:hover:before {
     border-radius: 50px;
     top: -18px;
 }
-
-
-/* ===================================
-    2.5 Image/Text Slider CSS
-====================================== */
 
 .image-slider-wrapper {
     margin-bottom: 20px;
@@ -1091,10 +1068,6 @@ a.button-dot:hover:before {
     animation-name: fadeOut;
 }
 
-
-/* ===================================
-    3. Home Section CSS
-====================================== */
 .entry-taitl {
 font-size: 25px;
 font-family: 'Fira Sans';
