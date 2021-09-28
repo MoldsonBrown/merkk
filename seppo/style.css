@@ -1572,29 +1572,34 @@ letter-spacing: 2px;
     filter: grayscale(16%);
     animation: slideBg 20s linear infinite;
     animation-timing-function: ease-in-out;
-    animation-direction: alternate;
+    animation-direction: normal;
 }
 @keyframes slideBg {
-  20% {
+  0% {
     background-image: url(images/desierto.jpg);
     left:-100;
   }
-  40% {
+  20% {
     background-image: url(images/cholas.jpg);
     left:-200;
   }
-  60% {
+  40% {
     background-image: url(images/painecerca.jpg);
     left:-200;
   }
-  80% {
+  60% {
     background-image: url(images/pastizal.jpg);
     left:-400;
   }
-  100% {
+  80% {
     background-image: url(images/calafate.jpg);
     left:0;
   }
+  100% {
+    background-image: url(images/pintoras.jpg);
+    left:0;
+  }
+
 }
 #home .hidden {
   display: none;
