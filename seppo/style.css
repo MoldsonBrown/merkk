@@ -3565,6 +3565,69 @@ footer .footer-social-divider:before {
    .page-title-holder {
        width: 200px;
    }
-
-
+  .menu-wrapper {
+    max-width: 95%;
+  }
+  .member-info2 {
+        display: block;
+        margin: 0 auto !important;
+        width: 80%;
+        padding: 10%;
+  }
+  .member-name {
+    margin-top: 35px;
+    text-align: center;
+  }
+  .buttonClass2 {
+    display: initial;
+  }
+  .buttonClass {
+    display: initial;
+    letter-spacing: 1px;
+  }
+  p.howwework {
+    padding: 10px;
+    text-align: justify;
+}
+.section-wrapper {
+    padding: 0;
+}
+.page-title-holder:after {
+    border-width: 74px 60px 0 0;
+}
+.page-title-holder {
+    height: 74px;
+}
+.section h3.entry-title {
+    margin-top: 7px;
+}
+.titlemaster2 {
+  font-size: 4.2rem;
+}
+.titlemaster {
+  font-size: 24px;
+}
+.fila {
+  margin-top: 0;
+}
+.medium-text{
+  text-align: center;
+  font-size: 30px;
+}
+.one_half {
+  width: 92%;
+}
+.footer {
+  line-height: 0;
+}
+.section-wrapper2{
+      padding: 101px 0 0px 0;
+}
+a.titulo2 {
+  line-height: 1em;
+}
+.menu-holder {
+  height: 30%;
+  width: 100%;
+}
 }
