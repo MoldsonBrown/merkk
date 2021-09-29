@@ -3634,4 +3634,7 @@ a.titulo1 {
   height: 30%;
   width: 100%;
 }
+h1.big-text{
+  margin-top: 0;
+}
 }
