@@ -3655,9 +3655,11 @@ footer .footer-social-divider:before {
         margin: 0 auto !important;
         width: 80%;
         padding: 10%;
+        padding-top: 1em;
+        padding-bottom: 1px;
   }
   .member-name {
-    margin-top: 35px;
+    margin-top: 10px;
     text-align: center;
   }
   .buttonClass2 {
@@ -3688,6 +3690,7 @@ footer .footer-social-divider:before {
 }
 .titlemaster {
   font-size: 24px;
+  padding: 0;
 }
 .fila {
   margin-top: 0;
