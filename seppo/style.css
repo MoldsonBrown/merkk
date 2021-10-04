@@ -1964,7 +1964,7 @@ h1.titulo {
 }
 
 .portfolio-content h1 {
-    font-size: 44px;
+    font-size: 51px;
     color: #000;
     line-height: 130%;
 }
@@ -2252,6 +2252,7 @@ p.howwework {
 /* ===================================
     11. Skills Section CSS
 ====================================== */
+
 
 .skills-holder {
     position: relative;
@@ -3624,7 +3625,17 @@ footer .footer-social-divider:before {
 
 
 @media screen and (max-width: 400px) {
+  .one_half {
+    text-align: justify;
+}
 
+.portfolio-content h1 {
+    font-size: 28px;
+}
+
+  h1.titulo {
+  text-align: center;
+}
    .page-title-holder {
        width: 200px;
    }
