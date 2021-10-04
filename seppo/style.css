@@ -322,6 +322,8 @@ background-color: lemonchiffon;
 }
 
 
+
+
 .fila {
   gap: 4px;
   z-index: 2;
@@ -430,6 +432,7 @@ background-color: lemonchiffon;
   padding: 1px;
   position: relative;
   margin-bottom: -1.1rem;
+  padding-top: 1.6em;
 }
 
 .titlemaster2 {
@@ -437,7 +440,7 @@ background-color: lemonchiffon;
   font-size: 6.2rem;
   z-index: 2;
   color: white;
-  line-height: 80%;
+  line-height: 88%;
   text-align: center;
   width: auto;
   height: auto;
@@ -757,6 +760,7 @@ body .social a:hover {
 .last {
     margin-right: 0 !important;
     clear: right;
+    text-align: justify;
 }
 
 .one {
@@ -1144,16 +1148,20 @@ letter-spacing: 2px;
     background-image: url(images/central_2.jpg);
     left:0;
   }
-  50% {
+  40% {
     background-image: url(images/central_3.jpg);
     left:0;
   }
-  75% {
+  60% {
     background-image: url(images/central_4.jpg);
     left:0;
   }
-  100% {
+  80% {
     background-image: url(images/central_5.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/central_6.jpg);
     left:0;
   }
 }
@@ -1400,8 +1408,12 @@ letter-spacing: 2px;
     background-image: url(images/Chile_3.jpg);
     left:0;
   }
-  100% {
+  80% {
     background-image: url(images/Chile_4.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/Chile_5.jpg);
     left:0;
   }
 }
@@ -1476,16 +1488,24 @@ letter-spacing: 2px;
     background-image: url(images/Cordoba_1.jpg);
     left:0;
   }
-  40% {
+  20% {
     background-image: url(images/Cordoba_2.jpg);
     left:0;
   }
-  80% {
+  40% {
     background-image: url(images/Cordoba_3.jpg);
     left:0;
   }
-  100% {
+  60% {
     background-image: url(images/Cordoba_4.jpg);
+    left:0;
+  }
+  80% {
+    background-image: url(images/Cordoba_5.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/Cordoba_6.jpg);
     left:0;
   }
 }
@@ -1542,31 +1562,78 @@ letter-spacing: 2px;
     backface-visibility: hidden;
     min-height: calc(100vh - 77px);
     display: flex;
-    filter: grayscale(16%);
-    animation: slideBg 20s linear infinite;
+    animation: slideBg 20s linear infinite 0s;
     animation-timing-function: ease-in-out;
-    animation-direction: normal;
+    animation-direction: alternate;
 }
 @keyframes slideBg {
-  0% {
+  25% {
     background-image: url(images/desierto.jpg);
     left:-100;
   }
-  20% {
+  35% {
     background-image: url(images/cholas.jpg);
     left:-200;
   }
-  40% {
+  55% {
     background-image: url(images/painecerca.jpg);
     left:-200;
   }
-  60% {
+  75% {
     background-image: url(images/pastizal.jpg);
     left:-400;
   }
-  80% {
+  85% {
     background-image: url(images/calafate.jpg);
+    left:-500;
+  }
+  100% {
+    background-image: url(images/pintoras.jpg);
     left:0;
+  }
+
+}
+#home .hidden {
+  display: none;
+}
+
+#home .section-wrapper {
+    margin: auto;
+    padding: 0;
+}
+
+#signature {
+    background-image: url(images/desierto.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    min-height: calc(100vh - 77px);
+    display: flex;
+    animation: slideBg12 20s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes slideBg12 {
+  25% {
+    background-image: url(images/desierto.jpg);
+    left:-100;
+  }
+  35% {
+    background-image: url(images/cholas.jpg);
+    left:-200;
+  }
+  55% {
+    background-image: url(images/painecerca.jpg);
+    left:-200;
+  }
+  75% {
+    background-image: url(images/pastizal.jpg);
+    left:-400;
+  }
+  85% {
+    background-image: url(images/calafate.jpg);
+    left:-500;
   }
   100% {
     background-image: url(images/pintoras.jpg);
@@ -1693,7 +1760,6 @@ h1.titulo {
     background-position: right center;
     background-repeat: no-repeat;
     background-size: auto;
-    filter: grayscale(16%);
 }
 
 .about-us {
@@ -1793,9 +1859,6 @@ h1.titulo {
     8. Portfolio Section CSS
 ====================================== */
 
-.site-content {
-  filter: grayscale(16%);
-}
 
 .grid {
     width: 100%;
@@ -1840,7 +1903,7 @@ h1.titulo {
     width: 100% !important;
     height: auto;
     display: block;
-    filter: grayscale(40%); /* Chrome 19+ & Safari 6+ */
+    filter: grayscale(60%); /* Chrome 19+ & Safari 6+ */
     transition: filter 600ms ease;
 }
 
@@ -2142,7 +2205,7 @@ h1.titulo {
 
 p.howwework {
   font-size: 16px;
-  text-align: left;
+  text-align: justify;
 }
 
 .member-right .member-info {
@@ -3636,5 +3699,8 @@ a.titulo1 {
 }
 h1.big-text{
   margin-top: 0;
+}
+.fila{
+  text-align: justify;
 }
 }
