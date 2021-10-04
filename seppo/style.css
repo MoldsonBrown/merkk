@@ -1536,12 +1536,20 @@ letter-spacing: 2px;
     background-image: url(images/SP_1.jpg);
     left:0;
   }
-  50% {
+  30% {
     background-image: url(images/SP_2.jpg);
     left:0;
   }
-  100% {
+  60% {
     background-image: url(images/SP_3.jpg);
+    left:0;
+  }
+  80% {
+    background-image: url(images/SP_4.jpg);
+    left:0;
+  }
+  100% {
+    background-image: url(images/SP_5.jpg);
     left:0;
   }
 }
