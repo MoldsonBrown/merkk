@@ -3006,6 +3006,9 @@ footer .footer-social-divider:before {
     .content-570 {
         max-width: 95%;
     }
+    .close-icon {
+      position: sticky;
+    }
 
 }
 
