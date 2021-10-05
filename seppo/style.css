@@ -3681,6 +3681,10 @@ footer .footer-social-divider:before {
 .copyright-holder {
   margin-bottom: 2em;
 }
+.color-filter1 img {
+  width: 8%;
+  height: auto;
+}
 .color-filter5 img {
   width: 8%;
   height: auto;
