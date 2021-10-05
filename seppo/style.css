@@ -105,7 +105,7 @@ body pre {
 
 .section-wrapper {
     position: relative;
-    padding: 101px 0 115px 0;
+    padding: 101px 0 0 0;
 }
 
 .section-wrapper2 {
@@ -331,7 +331,6 @@ background-color: lemonchiffon;
   padding: 20px;
   border-radius: 5px;
   font-size: 17px;
-  margin-top: 1.6em;
   line-height: 1.5em;
   background-color: #0006;
 }
@@ -432,7 +431,7 @@ background-color: lemonchiffon;
   padding: 1px;
   position: relative;
   margin-bottom: -1.1rem;
-  padding-top: 1.6em;
+  padding-top: 0.6em;
 }
 
 .titlemaster2 {
@@ -3633,16 +3632,18 @@ footer .footer-social-divider:before {
 
 
 @media screen and (max-width: 400px) {
-  .one_half {
-    text-align: justify;
-}
 
 .portfolio-content h1 {
-    font-size: 28px;
+    font-size: 25px;
+    padding-top: 1.5em;
+    padding-bottom: 0;
 }
 
   h1.titulo {
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 1em;
+
 }
    .page-title-holder {
        width: 200px;
