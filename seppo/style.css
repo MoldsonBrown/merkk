@@ -3685,7 +3685,11 @@ footer .footer-social-divider:before {
   width: 8%;
   height: auto;
 }
-.color-filter2 .color-filter3 img {
+.color-filter2 img {
+  width: 8%;
+  height: auto;
+}
+.color-filter3 img {
   width: 8%;
   height: auto;
 }
