@@ -3640,6 +3640,52 @@ footer .footer-social-divider:before {
 
 @media screen and (max-width: 400px) {
 
+#buenos {
+  min-height: calc(46vh - 77px);
+}
+#cordoba {
+  min-height: calc(46vh - 77px);
+}
+#northern {
+  min-height: calc(46vh - 77px);
+}
+#mendo {
+  min-height: calc(46vh - 77px);
+}
+#peninsula {
+  min-height: calc(46vh - 77px);
+}
+#central {
+  min-height: calc(46vh - 77px);
+}
+#lake {
+  min-height: calc(46vh - 77px);
+}
+#southern {
+  min-height: calc(46vh - 77px);
+}
+#iguazu {
+  min-height: calc(46vh - 77px);
+}
+#chile {
+  min-height: calc(46vh - 77px);
+}
+#uru {
+  min-height: calc(46vh - 77px);
+}
+
+.entry-taitl {
+  font-size: 19px;
+}
+
+.copyright-holder {
+  margin-bottom: 2em;
+}
+.site-wrapper img {
+  width: 8%;
+  height: auto;
+}
+
 .portfolio-content h1 {
     font-size: 25px;
     padding-top: 1.5em;
@@ -3721,6 +3767,10 @@ a.titulo2 {
   line-height: 1em;
   font-size: 84px;
 }
+a.titulo4 {
+  font-size: 45px;
+}
+
 a.titulo1 {
   font-size: 31px;
 }
