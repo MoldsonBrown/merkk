@@ -2997,7 +2997,9 @@ footer .footer-social-divider:before {
 /* ===================================
     17. Responsive CSS
 ====================================== */
-
+.close-icon {
+  position: sticky;
+}
 
 @media screen and (max-width: 1600px) {
 
@@ -3005,9 +3007,6 @@ footer .footer-social-divider:before {
     .content-960,
     .content-570 {
         max-width: 95%;
-    }
-    .close-icon {
-      position: sticky;
     }
 
 }
