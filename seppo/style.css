@@ -218,12 +218,13 @@ body pre {
 .sm-clean a:hover,
 .sm-clean a:focus,
 .sm-clean a:active {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
     transition: color .3s ease,
         background-color .3s ease;
     padding: 15px;
     color: #000;
+    line-height: 1em;
 }
 
 .sm-clean ul a,
@@ -3641,6 +3642,8 @@ img.img_mobile {
 
 
 @media screen and (max-width: 400px) {
+
+
 
 .close-icon {
   position: sticky;
