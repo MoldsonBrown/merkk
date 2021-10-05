@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .icon {
   height: 40px;
   width: 40px;
@@ -18,6 +19,7 @@ html {
 
 .sections {
   width: 100vw;
+  height: 100vh;
 }
 
 .sections p {
@@ -39,9 +41,10 @@ html {
   background-image: url(img/abstrakt.jpeg);
   background-repeat: repeat-x;
   -webkit-background-clip:text;
-  animation: animate 60s linear infinite;
+  animation: animate 200s linear infinite;
   padding-top: 1.5em;
   position:relative;
+  height: 100vh;
 }
 .menu p {
   margin: 0;
@@ -61,7 +64,7 @@ a:hover {
     0% {
       background-position: left 0px top 10px;
     }
-    40% {
+    100% {
       background-position: left 600px top 10px;
     }
 }
@@ -100,4 +103,21 @@ body {
     80% { transform: translate(-15%,0) }
     90% { transform: translate(10%,5%) }
     100% { transform: translate(5%,0) }
+}
+
+@media screen and (max-width: 400px) {
+  .menu {
+      font-size: 90px;
+      color: rgba(225, 225, 225, 0.1);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      width: 100vw;
+      text-align: center;
+      background-image: url(img/abstrakt.jpeg);
+      background-repeat: repeat-x;
+      -webkit-background-clip: text;
+      animation: animate 200s linear infinite;
+      padding-top: 2.5em;
+      position: relative;
+      height: 100vh;
 }
