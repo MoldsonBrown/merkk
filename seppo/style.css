@@ -445,6 +445,7 @@ background-color: lemonchiffon;
   height: auto;
   padding-top: 25px;
   position: relative;
+  padding-bottom: 1.2em;
 }
 
 .video-container {
@@ -744,8 +745,14 @@ body .social a:hover {
   background-color: #fff;
   color: #f68c64;
 }
+.one_half {
+  margin-right: 8%;
+  float: left;
+  position: relative;
+  margin-bottom: 0;
+}
 
-.one_half,
+
 .one_third,
 .two_third,
 .three_fourth,
@@ -3688,6 +3695,7 @@ footer .footer-social-divider:before {
 }
 .titlemaster2 {
   font-size: 4.2rem;
+  padding-bottom: 0.2em;
 }
 .titlemaster {
   font-size: 24px;
