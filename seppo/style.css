@@ -3640,6 +3640,10 @@ footer .footer-social-divider:before {
 
 @media screen and (max-width: 400px) {
 
+.close-icon {
+  position: sticky;
+}
+
 #buenos {
   min-height: calc(46vh - 77px);
 }
