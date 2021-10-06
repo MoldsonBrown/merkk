@@ -3643,7 +3643,7 @@ img.img_mobile {
 
 @media screen and (max-width: 400px) {
   #header-main-menu {
-      padding-bottom: 40px;
+      padding-bottom: 10px;
   }
 
 
@@ -3825,7 +3825,7 @@ a.titulo1 {
   font-size: 31px;
 }
 .menu-holder {
-  height: 36%;
+  height: 40%;
   width: 100%;
 }
 h1.big-text{
