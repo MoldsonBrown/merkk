@@ -3642,9 +3642,9 @@ img.img_mobile {
 
 
 @media screen and (max-width: 400px) {
-
-
-
+.owl-carousel .owl-item img {
+  margin-top: 3em;
+ }
 .close-icon {
   position: sticky;
 }
