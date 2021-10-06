@@ -3642,6 +3642,11 @@ img.img_mobile {
 
 
 @media screen and (max-width: 400px) {
+  #header-main-menu {
+      padding-bottom: 20px;
+  }
+
+
 .owl-carousel .owl-item img {
   margin-top: 3em;
  }
@@ -3820,7 +3825,7 @@ a.titulo1 {
   font-size: 31px;
 }
 .menu-holder {
-  height: 35%;
+  height: 36%;
   width: 100%;
 }
 h1.big-text{
