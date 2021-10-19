@@ -2994,6 +2994,21 @@ footer .footer-social-divider:before {
 /* ===================================
     17. Responsive CSS
 ====================================== */
+@media all and (min-width: 1100px) and (max-width: 1405px) {
+  .member-info2 {
+    vertical-align: top;
+    padding: 34px 70px 20px 70px;
+    padding-bottom: 20px;
+  }
+  .member-info {
+    vertical-align: 2em;
+    padding: 34px 70px 20px 70px;
+    padding-bottom: 20px;
+  }
+
+}
+
+
 img.img_mobile {
   display: none;
 }
