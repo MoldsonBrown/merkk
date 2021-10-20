@@ -3071,6 +3071,7 @@ img.img_mobile {
 
 @media screen and (max-width: 1024px) {
 
+
     .sm-clean li {
         margin-right: 8px;
     }
@@ -3439,6 +3440,10 @@ img.img_mobile {
         display: block;
         margin: 0 auto;
         width: 100% !important;
+    }
+
+    img.img_desktop {
+      display: none;
     }
 
     .member-info {
