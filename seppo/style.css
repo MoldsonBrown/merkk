@@ -2033,7 +2033,6 @@ h1.titulo {
     background-position: 50%;
     transition: all 0.3s ease;
     cursor: pointer;
-    position: absolute;
     left: -100px;
     top: 195px;
 }
@@ -3014,7 +3013,7 @@ img.img_mobile {
 }
 
 .close-icon {
-  position: absolute;
+  position: sticky;
 }
 
 @media screen and (max-width: 1600px) {
