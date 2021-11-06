@@ -2996,12 +2996,12 @@ footer .footer-social-divider:before {
 ====================================== */
 @media all and (min-width: 900px) and (max-width: 1440px) {
   .member-info2 {
-    vertical-align: top;
+    vertical-align: -6rem;
     padding: 34px 70px 20px 70px;
     padding-bottom: 20px;
   }
   .member-info {
-    vertical-align: 2em;
+    vertical-align: -4em;
     padding: 34px 70px 20px 70px;
     padding-bottom: 20px;
   }
