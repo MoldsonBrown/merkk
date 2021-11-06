@@ -2028,9 +2028,7 @@ h1.titulo {
     width: 70px;
     height: 70px;
     display: inline-block;
-    margin-bottom: 20px;
     background-size: 40px;
-    background-position: 50%;
     transition: all 0.3s ease;
     cursor: pointer;
     left: -100px;
