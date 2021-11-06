@@ -3670,7 +3670,7 @@ img.img_mobile {
   margin-top: 3em;
  }
 .close-icon {
-  position: sticky;
+  position: fixed;
 }
 
 img.img_mobile {
