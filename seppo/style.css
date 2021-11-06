@@ -3013,7 +3013,9 @@ img.img_mobile {
   display: none;
 }
 
-
+.close-icon {
+  position: absolute;
+}
 
 @media screen and (max-width: 1600px) {
 
