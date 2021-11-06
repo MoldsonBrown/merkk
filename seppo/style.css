@@ -3013,7 +3013,7 @@ img.img_mobile {
 }
 
 .close-icon {
-  position: sticky;
+  position: static;
 }
 
 @media screen and (max-width: 1600px) {
