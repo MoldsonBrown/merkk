@@ -359,6 +359,7 @@ background-color: lemonchiffon;
 	bottom: 20px;
   z-index: 2;
   padding-bottom: 5em;
+  padding-top: 5em;
 }
 
 .arrows path {
