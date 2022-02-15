@@ -245,7 +245,7 @@ body pre {
 
 body .sm-clean a:hover,
 body .main-menu.sm-clean .sub-menu li a:hover,
-body .sm-clean li.active a {
+body .sm-clean lu.active a {
   background-color: lemonchiffon;
 }
 
