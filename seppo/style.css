@@ -243,6 +243,10 @@ body pre {
     padding: 15px 0;
 }
 
+body .sub-menu ul a:hover {
+  background-color: lemonchiffon;
+}
+
 body .sm-clean a:hover,
 body .main-menu.sm-clean .sub-menu li a:hover,
 body .sm-clean li.active a,
