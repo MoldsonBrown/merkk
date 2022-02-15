@@ -348,11 +348,10 @@ body .sm-clean lu.active a {
 
 .arrows {
 	width: 60px;
-	height: 72px;
 	position: absolute;
 	left: 50%;
 	margin-left: -30px;
-	bottom: 20px;
+	bottom: -128px;
   z-index: 2;
   padding-top: 5em;
 }
@@ -1869,7 +1868,7 @@ h1.titulo {
 
 .grid {
     width: 100%;
-    margin: 62 auto;
+    margin: 99 auto;
     overflow: hidden;
     position: relative;
     max-width: 100%;
