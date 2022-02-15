@@ -243,16 +243,10 @@ body pre {
     padding: 15px 0;
 }
 
-body .sub-menu ul a:hover {
-  background-color: lemonchiffon;
-}
-
 body .sm-clean a:hover,
 body .main-menu.sm-clean .sub-menu li a:hover,
-body .sm-clean li.active a,
-body .sm-clean li.current-page-ancestor > a,
-body .sm-clean li.current_page_ancestor > a,
-body .sm-clean li.current_page_item > a {
+body .sm-clean li.active a {
+  background-color: lemonchiffon;
 }
 
 .sm-clean li {
