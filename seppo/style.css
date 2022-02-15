@@ -3206,6 +3206,8 @@ img.img_mobile {
 
     .main-menu ul {
         width: 12em;
+        background-color: #fff;
+        color: black;
     }
 
     .toggle-holder {
