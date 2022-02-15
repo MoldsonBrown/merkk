@@ -249,8 +249,6 @@ body .sm-clean li.active a,
 body .sm-clean li.current-page-ancestor > a,
 body .sm-clean li.current_page_ancestor > a,
 body .sm-clean li.current_page_item > a {
-background-color: lemonchiffon;
-
 }
 
 .sm-clean li {
