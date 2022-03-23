@@ -1761,7 +1761,6 @@ h1.titulo {
 ====================================== */
 
 #about {
-    background-image: url(images/on_white_right.png);
     background-color: #ffffff;
     background-position: right center;
     background-repeat: no-repeat;
@@ -1793,7 +1792,6 @@ h1.titulo {
 ====================================== */
 
 #news {
-    background-image: url(images/on_white_left.png);
     background-color: #ffffff;
     background-position: left center;
     background-repeat: no-repeat;
@@ -2050,7 +2048,6 @@ h1.titulo {
 ====================================== */
 
 #pricing {
-    background-image: url(images/on_white_right.png);
     background-color: #ffffff;
     background-position: right bottom;
     background-repeat: no-repeat;
